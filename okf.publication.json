@@ -38,7 +38,8 @@
       "workflow": ".github/workflows/validate.yml",
       "artifact": "_site/",
       "discovery": ".well-known/okf.json",
-      "manifest": "publication.json"
+      "manifest": "publication.json",
+      "standalone_reader": "viz.html"
     }
   },
   "validation": {

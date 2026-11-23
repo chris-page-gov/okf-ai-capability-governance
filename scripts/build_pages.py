@@ -15,6 +15,7 @@ from markdown_it import MarkdownIt
 import yaml
 
 from build import ROOT, SITE, digest, encode
+from build_viz import build_viz
 
 OUTPUT = ROOT / '_site'
 GENERATED = ROOT / 'generated'
@@ -154,6 +155,8 @@ def build():
     for route in sorted(readable):
         files[route.removesuffix('.md') + '.html'] = render_page(route, files[route], html_routes, markdown)
 
+    files['viz.html'] = build_viz(files, base, source, local_target)
+
     entrypoints = {
         'archive_index': 'site-bundle/index.md',
         'case_index': 'bundle/index.md',
@@ -164,6 +167,7 @@ def build():
         'full_bundle_zip': 'downloads/okf-ai-capability-governance-full-site.zip',
         'reading_copy': 'downloads/okf-pilot-reading-copy.txt',
         'visualisation': 'compare.html',
+        'standalone_reader': 'viz.html',
         'walkthrough': 'evaluation/BEGINNER-WALKTHROUGH.html',
         'client_evaluation': 'evaluation/CLIENT-EVALUATION.html',
         'file_manifest': 'publication.json',
@@ -183,6 +187,7 @@ def build():
 
 > Independent OKF 0.3 site archive and draft OKF+ case adapted from Em’s published playbook.
 
+- [Browse the standalone reader]({links['standalone_reader']})
 - [Start with the correspondence case]({links['case_index']})
 - [Check the supporting evidence]({links['case_evidence']})
 - [Read machine relationships as JSON-LD]({links['json_ld']})
