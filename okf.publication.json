@@ -18,7 +18,8 @@
     ],
     "generated": [
       "generated/",
-      "downloads/"
+      "downloads/",
+      "_site/"
     ],
     "excluded": [
       "generated/"
@@ -27,15 +28,26 @@
   "publication": {
     "authorised": true,
     "targets": [
-      "https://github.com/chris-page-gov/okf-ai-capability-governance"
+      "https://github.com/chris-page-gov/okf-ai-capability-governance",
+      "https://chris-page-gov.github.io/okf-ai-capability-governance/"
     ],
-    "release_status": "public-pilot"
+    "release_status": "public-pilot",
+    "pages": {
+      "url": "https://chris-page-gov.github.io/okf-ai-capability-governance/",
+      "branch": "main",
+      "workflow": ".github/workflows/validate.yml",
+      "artifact": "_site/",
+      "discovery": ".well-known/okf.json",
+      "manifest": "publication.json"
+    }
   },
   "validation": {
     "graph": "scripts/build.py --check",
     "core": "installed guarded okf-plus-generate validator",
     "consumer": "installed guarded okf-plus-consume scanner and offline browser",
     "source_archive": "scripts/build_site.py --check",
-    "downloads": "scripts/check_downloads.py"
+    "downloads": "scripts/check_downloads.py",
+    "pages": "scripts/build_pages.py --check",
+    "deployed_pages": "scripts/verify_pages.py"
   }
 }
