@@ -1,0 +1,34 @@
+Claude responded: I could read the ZIP and used these files: index.md, sections/transparency.md, sections/contact.md, correspondence/index.md, correspondence/concepts/send-varia…
+Read 10 files, ran 2 commands, updated tasks
+
+Read 10 files, ran 2 commands, updated tasks
+
+I could read the ZIP and used these files: index.md, sections/transparency.md, sections/contact.md, correspondence/index.md, correspondence/concepts/send-variant.md, draft-only.md, mandate.md, shadow-mode.md, evidence-brief.md, and correspondence/evidence.json. I also checked evidence/links.json. I read nothing outside the ZIP and took no external action.
+
+Em’s next portal review date and where to report a problem
+
+Next review: sections/transparency.md gives “Next review due: 2027-02-13”. It was last reviewed on 2026-11-22 and is version 3.4.0, owned by the AI Capability Governance working group. Publisher link: https://cyberdudeuk.github.io/ai-capability-governance/#transparency
+Where to report: the “Report a problem” paragraph in transparency.md lists what to report (broken links, out-of-date claims, accessibility barriers, gaps). It does not name a channel. The link inventory shows its “Report a problem” menu item only points back to #transparency.
+The channel itself: it comes from sections/contact.md, not transparency.md. Every route goes through GitHub, so reports are public. There is no email route. Security vulnerabilities go through private disclosure, not a public issue. Accessibility reports have a target first response of five working days. Publisher link: https://cyberdudeuk.github.io/ai-capability-governance/#contact
+
+Can the agent send the reply under the worked result?
+
+No. In Em’s worked example the send variant caps the agent at “L1 · Draft only”, so a person edits and commits every output, and it moves the case to Tier 4 · Critical with shadow mode mandatory (correspondence/concepts/send-variant.md; original: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked).
+
+What the publisher says, what the pilot infers, and what is still open
+
+Publisher’s statement: the composite example starts at Tier 3 · Enhanced, with sending explicitly out of scope. The send variant makes the effect irreversible and forces draft-only (evidence.json, entries send and exclusions).
+Pilot’s inference: the shadow-mode test design and the evidence brief are illustrative pilot additions, not Em’s text (shadow-mode.md, evidence-brief.md).
+Not established: all concept files are marked draft, and the bundle says the full corpus has not been independently semantically reviewed (index.md). The bundle holds no local appointment, approval, test results or real correspondence. A local decision-maker would need to supply the mandate change, draft-only and shadow-mode test evidence, unresolved issues and a named reviewer’s decision before any real send could be considered.
+
+Verification and freshness
+
+Verification: the publisher text is pinned to commit 9dd855ec… with source hashes in evidence.json.
+Freshness: the concept files were generated on 2026-11-23, with stale_after set to 2027-02-13.
+Missing: no independent verification beyond that is stated.
+
+
+
+
+
+just now

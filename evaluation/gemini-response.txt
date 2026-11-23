@@ -1,0 +1,152 @@
+    - img: copy
+  - button "Edit":
+    - img: edit
+  - heading "Gemini said" [level=6]
+  - paragraph:
+    - text: "I was able to read the supplied OKF 0.3 pilot bundle, with one notable omission: although"
+    - code: index.md
+    - text: links to
+    - code: relationships.jsonld
+    - text: ", that file is not included in the provided text boundaries, so no semantic graph edges can be inspected or quoted."
+  - paragraph:
+    - text: All concept files in this bundle carry
+    - code: "status: draft"
+    - text: ", were generated on"
+    - code: 2026-11-23T14:00:59Z
+    - text: against Em’s release
+    - code: 3.4.0
+    - text: (commit
+    - code: 9dd855ecfd8aece1b87c49eff2096b2d13d3fc98
+    - text: ", snapshot SHA-256"
+    - code: 7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1
+    - text: ), and are marked
+    - code: "stale_after: '2027-02-13'"
+    - text: .
+  - heading "What changes if the correspondence agent sends a reply itself" [level=3]
+  - paragraph:
+    - text: In the baseline composite example (
+    - code: concepts/mandate.md
+    - text: ), the agent classifies inbound correspondence and drafts replies from approved templates at Tier 3 · Enhanced, while a caseworker commits every action and sending is explicitly out of scope.
+  - paragraph:
+    - text: If the agent is given the send action, the publisher’s composite worked example (
+    - code: concepts/send-variant.md
+    - text: ","
+    - code: concepts/draft-only.md
+    - text: ","
+    - code: concepts/shadow-mode.md
+    - text: ", and"
+    - code: evidence.json
+    - text: under
+    - code: send
+    - text: ") records the following shifts:"
+  - list:
+    - paragraph: "Irreversibility and risk tier: Sending creates an external effect that no later correction can undo, moving the composite example from Tier 3 · Enhanced to Tier 4 · Critical."
+    - paragraph:
+      - text: "Autonomy cap: Autonomy is forced down to L1 · Draft only regardless of tier—a named person must still edit and commit every output ("
+      - code: concepts/draft-only.md
+      - text: ).
+    - paragraph:
+      - text: "Mandatory testing control: Shadow mode becomes mandatory ("
+      - code: concepts/shadow-mode.md
+      - text: ). In this pilot, that means running the agent to propose replies for comparison against human handling while the send capability remains disabled, and retaining evidence of how the draft-only boundary and escalations performed.
+    - paragraph:
+      - text: "Governance reassessment: Introducing a new action triggers a full governance reassessment under the publisher’s operating rules ("
+      - code: concepts/evidence-brief.md
+      - text: and
+      - code: evidence.json
+      - text: under
+      - code: reassessment
+      - text: ).
+  - paragraph: "Original publisher link for the decision that matters:"
+  - list:
+    - paragraph:
+      - text: "Worked example and send-variant decision:"
+      - code: "[https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked](https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked)"
+      - text: "(pinned commit extract:"
+      - code: "[https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html](https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html)"
+      - text: )
+    - paragraph:
+      - text: "Reassessment trigger for new actions:"
+      - code: "[https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate](https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate)"
+  - heading "Does the worked example authorise sending in your organisation?" [level=3]
+  - paragraph: "No. Neither the publisher’s worked example nor this pilot bundle authorises live sending in your organisation, for three reasons:"
+  - list:
+    - paragraph:
+      - text: "What the publisher’s composite example says: Even within Em’s own worked variant ("
+      - code: concepts/send-variant.md
+      - text: ","
+      - code: concepts/draft-only.md
+      - text: ), proposing a send action does not grant autonomous sending—it keeps the autonomy cap at L1 · Draft only, requires a named person to attach to and commit every outgoing reply (
+      - code: evidence.json
+      - code: decision
+      - text: ), and treats the portal itself as a concept utility rather than a statutory instrument or organisational policy (
+      - code: sections/transparency.md
+      - text: ).
+    - paragraph:
+      - text: "What the pilot infers: The bundle adapts Em’s composite case into illustrative pilot templates ("
+      - code: concepts/shadow-mode.md
+      - text: ","
+      - code: concepts/evidence-brief.md
+      - text: ) to show what testing and evidence a local reviewer would look for.
+    - paragraph:
+      - text: "What is missing for a local decision: As"
+      - code: concepts/evidence-brief.md
+      - text: states, this bundle contains no local appointment, no formal approval, and no real correspondence test data. To authorise any change locally, a named decision-maker in your organisation would need to establish a revised local mandate, completed results from draft-only and shadow-mode testing, a record of unresolved issues, and formal sign-off under your own internal governance, legal, data protection, and security policies.
+  - 'heading "Full-site spot check: review date and reporting a problem" [level=3]'
+  - paragraph:
+    - text: From
+    - code: sections/transparency.md
+    - text: "(publisher link:"
+    - code: "[https://cyberdudeuk.github.io/ai-capability-governance/#transparency](https://cyberdudeuk.github.io/ai-capability-governance/#transparency)"
+    - text: "):"
+  - list:
+    - paragraph:
+      - text: "Next portal review date: 2027-02-13 (listed under Ownership and review, following last review on"
+      - code: 2026-11-22
+      - text: for version
+      - code: 3.4.0
+      - text: ).
+    - paragraph:
+      - text: "Where and how to report a problem: Under Report a problem, users are invited to report a broken link, an out-of-date claim, an accessibility barrier, or a gap (with accessibility issues receiving a response within five working days). Under the Changelog entry for version"
+      - code: 3.0.0
+      - text: ", the portal specifies that contact is via the GitHub contact form and issue forms only (the previous email-client route and reply-address field having been removed)."
+  - heading "Bundle files relied on" [level=3]
+  - list:
+    - paragraph:
+      - code: index.md
+      - text: (bundle overview, draft status, provenance, and missing
+      - code: relationships.jsonld
+      - text: check)
+    - paragraph:
+      - code: concepts/mandate.md
+      - text: (baseline Tier 3 · Enhanced mandate and out-of-scope rules)
+    - paragraph:
+      - code: concepts/send-variant.md
+      - text: (Tier 4 · Critical shift, irreversibility, L1 cap, and shadow-mode requirement)
+    - paragraph:
+      - code: concepts/draft-only.md
+      - text: (L1 · Draft only human-commit control)
+    - paragraph:
+      - code: concepts/shadow-mode.md
+      - text: (illustrative pilot shadow-mode testing approach)
+    - paragraph:
+      - code: concepts/evidence-brief.md
+      - text: (reassessment trigger and missing local approval/test evidence)
+    - paragraph:
+      - code: evidence.json
+      - text: (verbatim pinned passages, SHA-256 hashes, and freshness dates for
+      - code: baseline
+      - text: ","
+      - code: send
+      - text: ","
+      - code: decision
+      - text: ","
+      - code: exclusions
+      - text: ", and"
+      - code: reassessment
+      - text: )
+    - paragraph:
+      - code: sections/transparency.md
+      - text: (portal review date
+      - code: 2027-02-13
+      - text: ", problem-reporting scope, and GitHub contact/issue form channel)"

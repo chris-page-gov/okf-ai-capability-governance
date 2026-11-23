@@ -1,0 +1,152 @@
+{
+  "operation": "scan",
+  "sandbox": "macos-sandbox-exec",
+  "package": "1.0.0",
+  "bundle": "generated/bundle",
+  "inspection": {
+    "markdown_sha256": {
+      "index.md": "59601538737ca08e41b5120bd9001d1afb58805643dc53696d9093747e046585",
+      "log.md": "04cfb6905c51c0901da33a46a17521ba85f78d341113161d1d1f99975dc79495",
+      "concepts/draft-only.md": "cd18c16a66488bd1208c397792fd7eb0d32a0908ee1999df422c03a6307b430d",
+      "concepts/evidence-brief.md": "506246dd95c1ee77de4afc22845e8dd0b5576f2ba5784983a0a641d5ca2e2630",
+      "concepts/mandate.md": "0a6ce803ca2b24e4947f079b65fffd1aa4f16d8425fa784c016e59dd178b17bc",
+      "concepts/send-variant.md": "a11f84b4a5f7dd0c0242490f7ce8f1911e4a299e3035e13530efde252b114281",
+      "concepts/shadow-mode.md": "b4ea914187a7c84cfc69652532be9b9c5a66179d349daed997bd27e856f3e667"
+    },
+    "markdown_bytes": 7161,
+    "excluded_nested_roots": [],
+    "asset_contents": "not-read"
+  },
+  "report": {
+    "bundle": {
+      "path": "<isolated-bundle>",
+      "title": "Correspondence triage and the send action",
+      "description": "An independent draft export of one public agent-governance case.",
+      "license": "CC-BY-4.0"
+    },
+    "okf_version": "0.3",
+    "now": "2026-11-23T14:00:59+00:00",
+    "summary": {
+      "concepts": 5,
+      "selected": 5,
+      "not_concepts": 0,
+      "types": {
+        "Control": 2,
+        "Worked Example": 2,
+        "Evidence Template": 1
+      },
+      "trust": {
+        "human-reviewed": 0,
+        "machine-confirmed": 0,
+        "unverified": 5
+      },
+      "stale": 0,
+      "deprecated": 0,
+      "draft": 5,
+      "not_current": 0
+    },
+    "concepts": [
+      {
+        "id": "concepts/draft-only",
+        "path": "concepts/draft-only.md",
+        "type": "Control",
+        "title": "Keep the draft-only limit",
+        "description": "For this variant, a person edits and commits every output.",
+        "tags": [],
+        "resource": null,
+        "status": "draft",
+        "current": true,
+        "superseded_by": null,
+        "replacement_id": null,
+        "trust": "unverified",
+        "verified_before_change": false,
+        "generated_at": "2026-11-23T14:00:59Z",
+        "stale_after": "2027-02-13",
+        "stale": false,
+        "runtime": null,
+        "notes": []
+      },
+      {
+        "id": "concepts/evidence-brief",
+        "path": "concepts/evidence-brief.md",
+        "type": "Evidence Template",
+        "title": "Prepare the evidence for review",
+        "description": "Record what changed, the proposed controls, test evidence and the open local decision.",
+        "tags": [],
+        "resource": null,
+        "status": "draft",
+        "current": true,
+        "superseded_by": null,
+        "replacement_id": null,
+        "trust": "unverified",
+        "verified_before_change": false,
+        "generated_at": "2026-11-23T14:00:59Z",
+        "stale_after": "2027-02-13",
+        "stale": false,
+        "runtime": null,
+        "notes": []
+      },
+      {
+        "id": "concepts/mandate",
+        "path": "concepts/mandate.md",
+        "type": "Worked Example",
+        "title": "Correspondence triage mandate",
+        "description": "The agent routes correspondence and drafts replies. A caseworker commits the action.",
+        "tags": [],
+        "resource": null,
+        "status": "draft",
+        "current": true,
+        "superseded_by": null,
+        "replacement_id": null,
+        "trust": "unverified",
+        "verified_before_change": false,
+        "generated_at": "2026-11-23T14:00:59Z",
+        "stale_after": "2027-02-13",
+        "stale": false,
+        "runtime": null,
+        "notes": []
+      },
+      {
+        "id": "concepts/send-variant",
+        "path": "concepts/send-variant.md",
+        "type": "Worked Example",
+        "title": "Give the agent the send action",
+        "description": "Sending introduces an irreversible effect and moves the example to Tier 4 · Critical.",
+        "tags": [],
+        "resource": null,
+        "status": "draft",
+        "current": true,
+        "superseded_by": null,
+        "replacement_id": null,
+        "trust": "unverified",
+        "verified_before_change": false,
+        "generated_at": "2026-11-23T14:00:59Z",
+        "stale_after": "2027-02-13",
+        "stale": false,
+        "runtime": null,
+        "notes": []
+      },
+      {
+        "id": "concepts/shadow-mode",
+        "path": "concepts/shadow-mode.md",
+        "type": "Control",
+        "title": "Test in shadow mode",
+        "description": "The worked send variant requires shadow mode.",
+        "tags": [],
+        "resource": null,
+        "status": "draft",
+        "current": true,
+        "superseded_by": null,
+        "replacement_id": null,
+        "trust": "unverified",
+        "verified_before_change": false,
+        "generated_at": "2026-11-23T14:00:59Z",
+        "stale_after": "2027-02-13",
+        "stale": false,
+        "runtime": null,
+        "notes": []
+      }
+    ],
+    "not_concepts": []
+  }
+}

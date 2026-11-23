@@ -1,0 +1,379 @@
+OKF 0.3 pilot reading copy. The file boundaries below reproduce the index, all concept files and evidence register.
+
+===== index.md =====
+---
+okf_version: '0.3'
+title: Correspondence triage and the send action
+description: An independent draft export of one public agent-governance case.
+license: CC-BY-4.0
+x-correspondence-profile: urn:okf:ai-capability-governance:profile:v1
+---
+
+# Correspondence triage and the send action
+
+A local pilot adapted from Em’s public composite case. Use the index to find the mandate, compare the proposed send action and identify what a local reviewer would need. All concepts are drafts. The pilot’s review trigger follows the publisher’s portal review date.
+
+- [Correspondence triage mandate](concepts/mandate.md) — The agent routes correspondence and drafts replies. A caseworker commits the action.
+- [Give the agent the send action](concepts/send-variant.md) — Sending introduces an irreversible effect and moves the example to Tier 4 · Critical.
+- [Keep the draft-only limit](concepts/draft-only.md) — For this variant, a person edits and commits every output.
+- [Test in shadow mode](concepts/shadow-mode.md) — The worked send variant requires shadow mode.
+- [Prepare the evidence for review](concepts/evidence-brief.md) — Record what changed, the proposed controls, test evidence and the open local decision.
+
+## Provenance
+
+Adapted from Em (cyberdudeuk) and contributors, release 3.4.0, commit `9dd855ecfd8aece1b87c49eff2096b2d13d3fc98`. Source extracts and the normalised graph are included.
+
+- [Publisher’s worked example](https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked)
+- [Evidence register](evidence.json)
+- [Semantic graph](relationships.jsonld)
+
+===== concepts/draft-only.md =====
+---
+type: Control
+title: Keep the draft-only limit
+description: For this variant, a person edits and commits every output.
+status: draft
+generated:
+  by: process:correspondence-pilot-export
+  at: '2026-11-23T14:00:59Z'
+stale_after: '2027-02-13'
+sources:
+- id: send
+  title: Variant where the agent sends its reply
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+- id: decision
+  title: Mandate / Decision rights
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+x-correspondence-iri: urn:okf:ai-capability-governance:concept:draft-only
+---
+
+# Keep the draft-only limit
+
+Em’s worked example keeps the autonomy cap at L1 for the send variant. A person edits and commits each output.[^send] In the baseline mandate, the caseworker commits the action.[^decision]
+
+[^send]: Variant where the agent sends its reply, Em’s public playbook.
+
+[^decision]: Mandate / Decision rights, Em’s public playbook.
+
+===== concepts/evidence-brief.md =====
+---
+type: Evidence Template
+title: Prepare the evidence for review
+description: Record what changed, the proposed controls, test evidence and the open
+  local decision.
+status: draft
+generated:
+  by: process:correspondence-pilot-export
+  at: '2026-11-23T14:00:59Z'
+stale_after: '2027-02-13'
+sources:
+- id: reassessment
+  title: Reassessment trigger for new actions
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate
+x-correspondence-iri: urn:okf:ai-capability-governance:concept:evidence-brief
+---
+
+# Prepare the evidence for review
+
+Em’s playbook calls for reassessment when new actions or permissions are introduced.[^reassessment] The pilot evidence brief asks for the changed mandate, results of draft-only and shadow-mode tests, unresolved issues, and the named local reviewer’s decision. This is an illustrative template. The bundle contains no local appointment, approval or real correspondence.
+
+[^reassessment]: Reassessment trigger for new actions, Em’s public playbook.
+
+===== concepts/mandate.md =====
+---
+type: Worked Example
+title: Correspondence triage mandate
+description: The agent routes correspondence and drafts replies. A caseworker commits
+  the action.
+status: draft
+generated:
+  by: process:correspondence-pilot-export
+  at: '2026-11-23T14:00:59Z'
+stale_after: '2027-02-13'
+sources:
+- id: baseline
+  title: Worked example opening
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+- id: scope
+  title: Mandate / In scope
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+- id: decision
+  title: Mandate / Decision rights
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+- id: exclusions
+  title: Mandate / Explicitly out of scope
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+x-correspondence-iri: urn:okf:ai-capability-governance:concept:mandate
+---
+
+# Correspondence triage mandate
+
+Em’s composite example starts at **Tier 3 · Enhanced**.[^baseline] The agent classifies correspondence and drafts a suggested reply from approved templates.[^scope] A caseworker commits the action.[^decision] Sending and deciding cases are outside the mandate.[^exclusions]
+
+## Continue through the case
+
+- [Give the agent the send action](./send-variant.md)
+
+[^baseline]: Worked example opening, Em’s public playbook.
+
+[^scope]: Mandate / In scope, Em’s public playbook.
+
+[^decision]: Mandate / Decision rights, Em’s public playbook.
+
+[^exclusions]: Mandate / Explicitly out of scope, Em’s public playbook.
+
+===== concepts/send-variant.md =====
+---
+type: Worked Example
+title: Give the agent the send action
+description: Sending introduces an irreversible effect and moves the example to Tier
+  4 · Critical.
+status: draft
+generated:
+  by: process:correspondence-pilot-export
+  at: '2026-11-23T14:00:59Z'
+stale_after: '2027-02-13'
+sources:
+- id: send
+  title: Variant where the agent sends its reply
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+x-correspondence-iri: urn:okf:ai-capability-governance:concept:send-variant
+---
+
+# Give the agent the send action
+
+In Em’s published variant, the proposed change is to let the agent send the reply itself. Em treats the new effect as irreversible, moves the composite example to **Tier 4 · Critical**, sets the variant’s cap at **L1 · Draft only**, and requires shadow mode.[^send] This records the published outcome for the example.
+
+## Continue through the case
+
+- [Keep the draft-only limit](./draft-only.md)
+- [Test in shadow mode](./shadow-mode.md)
+- [Prepare the evidence for review](./evidence-brief.md)
+
+[^send]: Variant where the agent sends its reply, Em’s public playbook.
+
+===== concepts/shadow-mode.md =====
+---
+type: Control
+title: Test in shadow mode
+description: The worked send variant requires shadow mode.
+status: draft
+generated:
+  by: process:correspondence-pilot-export
+  at: '2026-11-23T14:00:59Z'
+stale_after: '2027-02-13'
+sources:
+- id: send
+  title: Variant where the agent sends its reply
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+x-correspondence-iri: urn:okf:ai-capability-governance:concept:shadow-mode
+---
+
+# Test in shadow mode
+
+Em’s worked send variant requires shadow mode.[^send] For this pilot, show the agent proposing replies for comparison with human handling while the send action is unavailable. Retain evidence of how the draft-only boundary and escalation worked. These are illustrative test ideas.
+
+[^send]: Variant where the agent sends its reply, Em’s public playbook.
+
+===== evidence.json =====
+{
+  "source": {
+    "commit": "9dd855ecfd8aece1b87c49eff2096b2d13d3fc98",
+    "release": "3.4.0",
+    "snapshot_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+    "licence": "CC-BY-4.0",
+    "publisher": "Em (cyberdudeuk) and contributors",
+    "checked_at": "2026-11-23T14:00:59Z",
+    "check_again": "2027-02-13"
+  },
+  "evidence": {
+    "baseline": {
+      "@id": "urn:okf:ai-capability-governance:evidence:baseline",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Worked example opening",
+      "source_value": "Every artefact filled in, including the ones that are uncomfortable. Very high volume, moderate criticality — the case most departments would call easy. Named honestly it lands in Tier 3 · Enhanced , and that is the most useful thing in this chapter.",
+      "source_value_sha256": "fd176af6032a56cef28a2de2a533adecc3fb6c617ff37b89e0946d1b3667ba38",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "send": {
+      "@id": "urn:okf:ai-capability-governance:evidence:send",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Variant where the agent sends its reply",
+      "source_value": "The agent sends the reply itself Tier moves + Irreversible Tier 4 · Critical Q1 · Automate with sampling L1 · Draft only — a person edits and commits every output One word in the mandate — send rather than draft — and an effect exists that no later correction undoes. Autonomy is forced to draft-only regardless of tier, and shadow mode becomes mandatory. This is the most common scope change requested after go-live, and the cheapest one to refuse.",
+      "source_value_sha256": "371ae30faf1c127718431c951a134234b07d0ae434bd9ffc35ed08e2e3ecfb05",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "reassessment": {
+      "@id": "urn:okf:ai-capability-governance:evidence:reassessment",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-raioperate",
+      "locator": "Reassessment trigger for new actions",
+      "source_value": "Action New tools, actions, schedules or agent links. Full",
+      "source_value_sha256": "7573701c34892ca0a6e53971276a5f3cac3a2f2ced8dd298c73b5d5acd132011",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "scope": {
+      "@id": "urn:okf:ai-capability-governance:evidence:scope",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Mandate / In scope",
+      "source_value": "Classify inbound correspondence to one of 34 work queues, extract sender, reference, subject and any stated deadline, and draft a suggested reply from the approved template set.",
+      "source_value_sha256": "7b5d0beeb87dd42eae75a09e3e3af9b8511ccb4732b6f9f10de6f765c9505662",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "decision": {
+      "@id": "urn:okf:ai-capability-governance:evidence:decision",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Mandate / Decision rights",
+      "source_value": "The agent proposes. A caseworker commits. Nothing leaves the organisation without a named person attached to it.",
+      "source_value_sha256": "4c461c90218f4868ed9237acb7c2b2081d3804acf321af4a1e7a915745d0f8ad",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "exclusions": {
+      "@id": "urn:okf:ai-capability-governance:evidence:exclusions",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Mandate / Explicitly out of scope",
+      "source_value": "Deciding any case. Sending anything. Replying to anyone. Handling correspondence flagged as a complaint, a legal threat, a safeguarding concern or a data-subject request — those route to a human unopened by the agent.",
+      "source_value_sha256": "8f2e0cde9562dc2fc81475d317ddab9fdaf474a5995860460da19770a6334b7a",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    }
+  }
+}
+
+===== sections/transparency.md =====
+---
+type: publisher-section
+title: How to check, challenge and contribute
+status: draft
+sources:
+- title: How to check, challenge and contribute
+  resource: https://cyberdudeuk.github.io/ai-capability-governance/#transparency
+x-dom-section: transparency
+---
+
+# How to check, challenge and contribute
+
+[Open this section on the publisher’s website](https://cyberdudeuk.github.io/ai-capability-governance/#transparency)
+
+The numbers in brackets identify elements in the ordered DOM inventory. This is a text projection of Em’s material.
+
+## How to check, challenge and contribute [22001]
+
+[22002] A guidance utility that cannot be questioned is not trustworthy. Here is how this one is governed, and how you hold it to account.
+
+## Provenance of this content [22005]
+
+[22006] Every substantive claim links to a tiered source. Where this portal expresses an opinion or a house rule rather than a legal requirement, it says so.
+
+## Ownership and review [22008]
+
+[22009] Owner: AI Capability Governance working group Version: 3.4.0 Last reviewed: 2026-11-22 Next review due: 2027-02-13
+
+## Licence and reuse [22018]
+
+[22019] CC BY 4.0 (content) / MIT (code); Crown copyright material quoted here stays under the Open Government Licence v3.0. Fork it, adapt it for your organisation, and tell us what you changed so others benefit.
+
+## Data and privacy [22021]
+
+[22022] This site is static and client-side. It sets no tracking cookies, runs no analytics that identify you, and sends nothing you type in the tools to any server. Preferences are stored locally in your browser and you can clear them at any time.
+
+## Known limitations [22024]
+
+[22025] This is a concept portal, not a statutory instrument. It does not replace your organisation's policies, your DPO, your security team or your legal advice. Some linked standards sit behind paywalls.
+
+## Report a problem [22027]
+
+[22028] Tell us about a broken link, an out-of-date claim, an accessibility barrier or a gap. Accessibility issues get a response within five working days.
+
+## Changelog [22029]
+
+[22032] Recent changes to this portal
+
+[22035] Version
+
+[22036] Date
+
+[22037] Change
+
+[22040] 3.4.0
+
+[22041] 2026-11-22
+
+[22042] Merged the public parts of the Responsible AI and Data Use (RAIDU) work into the playbook: nine new chapters on human oversight principles, oversight controls, measuring oversight, human-side risks and priorities, verifying AI-assisted work, an oversight runbook with governance templates, neuroinclusive AI at work, a standards crosswalk and a 164-entry obligations register, plus 112 glossary terms. Internal working material stays out; see the classification record. Also fixed: tables no longer shrink to one word a line on phones, and the contents drawer flags only what is new.
+
+[22044] 3.3.0
+
+[22045] 2026-11-18
+
+[22046] One portal. The playbook moved into this page: one masthead with grouped menus, one contents drawer for the whole portal with read marks, one glossary (39 playbook terms merged in, now 62) and one footer. Redesigned after the original AI Capability Governance portal: Figtree typeface (self-hosted), navy front page with the orbit, the guidance-in-force ticker, tinted part cards and the chapter view with part chips and progress bars. playbook.html now redirects here. New check S25.
+
+[22048] 3.2.0
+
+[22049] 2026-11-18
+
+[22050] Added the agent governance playbook: 77 chapters in 12 parts ported from an internal AI agent governance toolkit, with a working “Can I use AI for this?” route tool, a knowledge map and a SKOS taxonomy. Ten chapters are withheld, each with its reason. New checks S21 to S24. Fixed the masthead line that repeated the old name.
+
+[22052] 3.1.0
+
+[22053] 2026-11-13
+
+[22054] Content review: replaced the withdrawn Generative AI Framework for HMG with the AI Playbook, added the Data (Use and Access) Act 2025 and the ICO's automated decision-making guidance, flagged ICO guidance now under review, and fixed four moved links. Added a field to the evidence pack for the data definitions an agent's answer relied on, and signals S22 to S28.
+
+[22056] 3.0.1
+
+[22057] 2026-11-08
+
+[22058] Replaced one broken and four moved resource links after an automated check of all 68; 11 sites refuse automated checks and are still to be checked by hand. The Monday health run now checks every link.
+
+[22060] 3.0.0
+
+[22061] 2026-11-08
+
+[22062] Renamed to AI Capability Governance and Implementation and moved to its own address. Added the Signals section (a weekly horizon scan of AI and data governance with attribution, evidence labels and an open JSON register). Added Beginner, Intermediate and Advanced levels to every persona, journey and common task, and a new data and AI governance lead persona. Contact is now by the GitHub contact form only: the email-client route and reply-address field are removed, and the two email addresses in the worked metadata example are replaced with a role and the form. Added the issue forms the contact links already pointed to, and automated checks, including browser checks, that run before anything is published. Fixed the page scrolling sideways on small phones.
+
+[22064] 2.0.0
+
+[22065] 2026-08-08
+
+[22066] Added task-first entry points, six interactive tools, a tiered resource library, H0–H5 review table, RACI, transparency and redress commitments, MoSCoW roadmap, glossary and FAQ. Added dark, high-contrast and large-text modes, site search, on-page navigation and a print stylesheet.
+
+[22068] 1.0.0
+
+[22069] Initial
+
+[22070] Concept portal: mission, knowledge corpus, toolkit, assurance workflow, catalogue, UCD and code of practice.
+

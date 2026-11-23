@@ -1,0 +1,42 @@
+{
+  "browser": "156.0.8078.4",
+  "steps": [
+    {
+      "step": "W1",
+      "visited": "https://cyberdudeuk.github.io/ai-capability-governance/#start-here",
+      "observed": "Beginner and role routes, including new or occasional contributor"
+    },
+    {
+      "step": "W2",
+      "visited": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "observed": "Worked examples link opens correspondence case, Tier 3 · Enhanced"
+    },
+    {
+      "step": "W3",
+      "visited": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "observed": "Published send variant shows an irreversible action, Tier 4, draft-only and shadow mode"
+    },
+    {
+      "step": "W4",
+      "visited": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate",
+      "observed": "Operational chapter says a new action triggers reassessment"
+    },
+    {
+      "step": "B1",
+      "artefact": "generated/visualisation.html",
+      "observed": "Default draft view, Tier 3, index and concept links"
+    },
+    {
+      "step": "B2",
+      "artefact": "generated/visualisation.html",
+      "observed": "Keyboard changes comparison to Tier 4; draft-only and shadow mode visible"
+    },
+    {
+      "step": "B3",
+      "artefact": "generated/visualisation.html",
+      "observed": "Direction, synthetic-fixture scope, exact witness, publisher URL and pinned source link"
+    }
+  ],
+  "mobileOverflow": false,
+  "uncaughtPageErrors": []
+}

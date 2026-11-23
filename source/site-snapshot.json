@@ -1,0 +1,731 @@
+{
+  "commit": "9dd855ecfd8aece1b87c49eff2096b2d13d3fc98",
+  "tree_truncated": false,
+  "observed_at": "2026-11-23T14:06:05+00:00",
+  "deployed_inventory_rule": ".github/workflows/pages.yml build copy list",
+  "deploy_files": [
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "snapshot": "site/.nojekyll.gz",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/.nojekyll",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/.nojekyll",
+      "live_observation": {
+        "status": "unavailable",
+        "detail": "HTTP Error 404: Not Found"
+      }
+    },
+    {
+      "path": "app.js",
+      "sha256": "7ab04f0d50881871430c62254186e6fe85068004182e9cf0eb6a79c045afce22",
+      "bytes": 97782,
+      "snapshot": "site/app.js.gz",
+      "git_blob": "a0838970f1a2a95a4bf893c7ad684c91102a9751",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/app.js",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/app.js",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/app.js",
+        "sha256": "7ab04f0d50881871430c62254186e6fe85068004182e9cf0eb6a79c045afce22"
+      }
+    },
+    {
+      "path": "data/ai-data-governance-signals.json",
+      "sha256": "e5b753e6af6311a46ce45970c9923a818cd5319557152000159e0960fc6591e2",
+      "bytes": 29624,
+      "snapshot": "site/data/ai-data-governance-signals.json.gz",
+      "git_blob": "add4df5054842c5a0b3a9783f1fb1281a0c38ad5",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/data/ai-data-governance-signals.json",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/data/ai-data-governance-signals.json",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/data/ai-data-governance-signals.json",
+        "sha256": "e5b753e6af6311a46ce45970c9923a818cd5319557152000159e0960fc6591e2"
+      }
+    },
+    {
+      "path": "data/playbook-taxonomy.jsonld",
+      "sha256": "04c5051c6859ef5778e4cd1f419c6029e18108a24ca3912e8f5777637b66db4a",
+      "bytes": 82868,
+      "snapshot": "site/data/playbook-taxonomy.jsonld.gz",
+      "git_blob": "dabfdf7c60d5509402b8e60a137a6a61237e1cac",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/data/playbook-taxonomy.jsonld",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/data/playbook-taxonomy.jsonld",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/data/playbook-taxonomy.jsonld",
+        "sha256": "04c5051c6859ef5778e4cd1f419c6029e18108a24ca3912e8f5777637b66db4a"
+      }
+    },
+    {
+      "path": "data/playbook.json",
+      "sha256": "d4406a2819b3d4df6922862379dd862d9cf8234e99de7f110ac568ee89e2478e",
+      "bytes": 871409,
+      "snapshot": "site/data/playbook.json.gz",
+      "git_blob": "0bb591bf8af241ad8c9dfb1f4b1af75bc065fd4e",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/data/playbook.json",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/data/playbook.json",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/data/playbook.json",
+        "sha256": "d4406a2819b3d4df6922862379dd862d9cf8234e99de7f110ac568ee89e2478e"
+      }
+    },
+    {
+      "path": "fonts/OFL.txt",
+      "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d",
+      "bytes": 4498,
+      "snapshot": "site/fonts/OFL.txt.gz",
+      "git_blob": "9766a6f8151480b4c1ecc9c7db89a6f2785ae84d",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/fonts/OFL.txt",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/fonts/OFL.txt",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/fonts/OFL.txt",
+        "sha256": "ee23e6c84000126692e112ff067b456470493349f993ceaa8b4d3766dd6fad5d"
+      }
+    },
+    {
+      "path": "fonts/figtree-latin-ext-wght-normal.woff2",
+      "sha256": "bf7828e2c258cffcfa50a048ee388a36b95bc16b452e8d36fa797635dbe15965",
+      "bytes": 10280,
+      "snapshot": "site/fonts/figtree-latin-ext-wght-normal.woff2.gz",
+      "git_blob": "a8a112383ac0345ddab6d8373e5cc6a5a0213bb3",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/fonts/figtree-latin-ext-wght-normal.woff2",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/fonts/figtree-latin-ext-wght-normal.woff2",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/fonts/figtree-latin-ext-wght-normal.woff2",
+        "sha256": "bf7828e2c258cffcfa50a048ee388a36b95bc16b452e8d36fa797635dbe15965"
+      }
+    },
+    {
+      "path": "fonts/figtree-latin-wght-normal.woff2",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "bytes": 20156,
+      "snapshot": "site/fonts/figtree-latin-wght-normal.woff2.gz",
+      "git_blob": "05ce657de89207cf12c6a6457c4a1c83ea520626",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/fonts/figtree-latin-wght-normal.woff2",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/fonts/figtree-latin-wght-normal.woff2",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/fonts/figtree-latin-wght-normal.woff2",
+        "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd"
+      }
+    },
+    {
+      "path": "index.html",
+      "sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "bytes": 1237342,
+      "snapshot": "em-index.html.gz",
+      "git_blob": "346d1831b40aa944e0184448233f7910bd833fb2",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/",
+        "sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1"
+      }
+    },
+    {
+      "path": "playbook.css",
+      "sha256": "a2df8364ba9cc66b86d49d698e9122892bccaf40f055fa7ce40d887057effc64",
+      "bytes": 16184,
+      "snapshot": "site/playbook.css.gz",
+      "git_blob": "95e0229ec836c17ba6c2516b634cff995953545e",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/playbook.css",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/playbook.css",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/playbook.css",
+        "sha256": "a2df8364ba9cc66b86d49d698e9122892bccaf40f055fa7ce40d887057effc64"
+      }
+    },
+    {
+      "path": "playbook.html",
+      "sha256": "d0ed3e46a122de099644fbfe3268f32c12cc5be5151e7901ef2ba5931d0a9a57",
+      "bytes": 614,
+      "snapshot": "site/playbook.html.gz",
+      "git_blob": "20d120defd962148e2e507e50de9f2e078f3b863",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/playbook.html",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/playbook.html",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/playbook.html",
+        "sha256": "d0ed3e46a122de099644fbfe3268f32c12cc5be5151e7901ef2ba5931d0a9a57"
+      }
+    },
+    {
+      "path": "playbook.js",
+      "sha256": "22942903ff8be3e7c88e5951df9eff00b6785c98819569eecf719fd8bea7ab9e",
+      "bytes": 12314,
+      "snapshot": "site/playbook.js.gz",
+      "git_blob": "a24a96b574fbbbfc31a39b6b81f8fb9892a6f1ad",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/playbook.js",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/playbook.js",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/playbook.js",
+        "sha256": "22942903ff8be3e7c88e5951df9eff00b6785c98819569eecf719fd8bea7ab9e"
+      }
+    },
+    {
+      "path": "styles.css",
+      "sha256": "fd83013ee5dbaa2fbeb58f9a9aa3675ebca7e087804009c4c1e2278d32df797e",
+      "bytes": 26663,
+      "snapshot": "site/styles.css.gz",
+      "git_blob": "938f7aa1cac8935c83a6b3141a7cd53fc4337d40",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/styles.css",
+      "pinned_url": "https://raw.githubusercontent.com/cyberdudeuk/ai-capability-governance/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/styles.css",
+      "live_observation": {
+        "status": "exact",
+        "final_url": "https://cyberdudeuk.github.io/ai-capability-governance/styles.css",
+        "sha256": "fd83013ee5dbaa2fbeb58f9a9aa3675ebca7e087804009c4c1e2278d32df797e"
+      }
+    }
+  ],
+  "repository_files": [
+    {
+      "path": ".github/CODEOWNERS",
+      "size": 15,
+      "sha": "76689ff8e8b51f789d507b47c48ef48916aa36b6",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/DISCUSSION_TEMPLATE/ideas.yml",
+      "size": 2161,
+      "sha": "8a4e0ce5b3a5c8f0bf110b36d50eb0da7c519c5c",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/accessibility_issue.yml",
+      "size": 1109,
+      "sha": "c6ce280c1896b38f4fa5bafd6a2bdbcee10caaa1",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "size": 970,
+      "sha": "515235c61037991332e07429a44df263bd8883aa",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "size": 416,
+      "sha": "f7bcb30cb629a771eb757bbf14dd3c56c7206caf",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/contact.yml",
+      "size": 1611,
+      "sha": "d4f83596fb809790d09a6225a2d0a4a72d642ac2",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/content_correction.yml",
+      "size": 1061,
+      "sha": "ebad43bc9789362c4e9c2c91f3bc7409b8af8760",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "size": 1217,
+      "sha": "595d867be54d4b4c033cae34456e74ab879ab5ed",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/occurrence.yml",
+      "size": 924,
+      "sha": "50c7e0ec104d50d3782ad9784fd7515485507dfc",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/signal_suggestion.yml",
+      "size": 1172,
+      "sha": "594a9cc6f116e9f01beefd695d1c9d6547ac0d92",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "size": 678,
+      "sha": "e4aa15f20027b9ee230d652023ac1d6abdfa1f6a",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "size": 634,
+      "sha": "c0fa9ee52564710ac433659d2bcf532b983120ef",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/labels.yml",
+      "size": 1749,
+      "sha": "3f362ae594eebd3fee1fbfbdcdee35220d33a3eb",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/artefacts.yml",
+      "size": 586,
+      "sha": "04ed13570f130cd3d0bf7db0cb5bf5a9fe96ecbf",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "size": 3622,
+      "sha": "5aaabb53b84832f04fccd1bb085bf0d75d0d6701",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "size": 2905,
+      "sha": "b6c9b9ccfbe5b6fcedd38ac2b9b082c6a5cb452d",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/dependency-review.yml",
+      "size": 537,
+      "sha": "c4dadb871402499cd5d610c0872d7641060f42d7",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/digest.yml",
+      "size": 1217,
+      "sha": "8476d7c5848912e7aa51e8aa31f554a2db36aaa1",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/labels.yml",
+      "size": 1674,
+      "sha": "6a0e8c6aa1d20ce3331d8d7f44b2819b5b3beb21",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "size": 2329,
+      "sha": "98e1ece86ed93b190e2c6126e7ee7d436df8f682",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "size": 1883,
+      "sha": "b2417af8d1793d43e713e47c1e3ce1d724f8f591",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/scorecard.yml",
+      "size": 1244,
+      "sha": "648d5ac74d0a1ba9fe466676b2813b172fe3a4c7",
+      "mode": "100644"
+    },
+    {
+      "path": ".github/workflows/triage.yml",
+      "size": 1159,
+      "sha": "8afa70332f90a422ea033589e632aff7764ec9f7",
+      "mode": "100644"
+    },
+    {
+      "path": ".gitignore",
+      "size": 66,
+      "sha": "c811243ebb84dc983bbbf8e2af829b73320497a6",
+      "mode": "100644"
+    },
+    {
+      "path": ".gitlint",
+      "size": 222,
+      "sha": "6bbe96c135ab685b09eb4e5bbd5df5d61303ec05",
+      "mode": "100644"
+    },
+    {
+      "path": ".nojekyll",
+      "size": 0,
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "size": 652,
+      "sha": "ade1ac8f6c07e5c5206551ba2a0c99e125922703",
+      "mode": "100644"
+    },
+    {
+      "path": ".secrets.baseline",
+      "size": 2629,
+      "sha": "72a71a5c1b69ee076f097726f7818e5a84c9dba5",
+      "mode": "100644"
+    },
+    {
+      "path": ".zenodo.json",
+      "size": 1099,
+      "sha": "93578577e5aa98990389fbff40d99f0196bf3ec4",
+      "mode": "100644"
+    },
+    {
+      "path": "ACCESSIBILITY.md",
+      "size": 1457,
+      "sha": "ccacbdb4e75d5b439e97bd82919d0872072deb48",
+      "mode": "100644"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 11444,
+      "sha": "27de5a9491d248a45b101722d0f63e97a6d4fbc9",
+      "mode": "100644"
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 776,
+      "sha": "d101d49f5716867c890fe269783dca9d46d4dd2a",
+      "mode": "100644"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 664,
+      "sha": "1d1a6eb46d179e0056374d41365e28fc3564a3d1",
+      "mode": "100644"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 1366,
+      "sha": "0fa433514c9ce03a76a9f7bc794171fb678258ad",
+      "mode": "100644"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1085,
+      "sha": "894ca05f234b6b8cc3cafc1c149b11bb3648f2e1",
+      "mode": "100644"
+    },
+    {
+      "path": "README.md",
+      "size": 13363,
+      "sha": "9bac97b870e84fba49aea3bc05a878014f4c3c35",
+      "mode": "100644"
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 816,
+      "sha": "e389dc53820a773091fce280c639a8c60be3a9e4",
+      "mode": "100644"
+    },
+    {
+      "path": "SUPPORT.md",
+      "size": 495,
+      "sha": "477938855e06894dadfa59f2a5657402b645523d",
+      "mode": "100644"
+    },
+    {
+      "path": "app.js",
+      "size": 97782,
+      "sha": "a0838970f1a2a95a4bf893c7ad684c91102a9751",
+      "mode": "100644"
+    },
+    {
+      "path": "data/ai-data-governance-signals.json",
+      "size": 29624,
+      "sha": "add4df5054842c5a0b3a9783f1fb1281a0c38ad5",
+      "mode": "100644"
+    },
+    {
+      "path": "data/playbook-taxonomy.jsonld",
+      "size": 82868,
+      "sha": "dabfdf7c60d5509402b8e60a137a6a61237e1cac",
+      "mode": "100644"
+    },
+    {
+      "path": "data/playbook.json",
+      "size": 871409,
+      "sha": "0bb591bf8af241ad8c9dfb1f4b1af75bc065fd4e",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/adr/0001-rename-and-scope.md",
+      "size": 1280,
+      "sha": "46e37b3320b68f972a00843508c4594df13db624",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/adr/0002-actions-policy.md",
+      "size": 517,
+      "sha": "870c056af0d2535e7823156bd8f90984cb619fc8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/01-theory-of-change.md",
+      "size": 2422,
+      "sha": "6fc2853b45a7734d28dbb92ccd77004328f037d2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/02-ur-bundle.md",
+      "size": 3107,
+      "sha": "db2dbef65bc98da98a22d799662a7efe74eb3691",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/03-prd.md",
+      "size": 2621,
+      "sha": "940671f31baed2a434718bcf1406f82157a4928f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/04-ftir.md",
+      "size": 2484,
+      "sha": "891f5a16937c3a80fd0ff7d0fdb27f3749c3f90f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/05-sad.md",
+      "size": 2046,
+      "sha": "a925c9a029654f0611b3d35c5919f721da5557df",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/06-hld.md",
+      "size": 2302,
+      "sha": "2834e54d3dddb8e8340e094b61d256ca357b745c",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/07-lld.md",
+      "size": 1825,
+      "sha": "ccf2eec7badec2197edb8157c45b2db6610c01e2",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/artefacts/manifest.yaml",
+      "size": 966,
+      "sha": "b3cad0f7478419c631a52d6e5fda7a60b3fc5782",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/compliance/secrets-audit.md",
+      "size": 676,
+      "sha": "0e77d9ed99bcf7eb905ef505719b3104d57b7af1",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/content-classification-2026-11-18.md",
+      "size": 9926,
+      "sha": "3b9aabe70b00946c8263f0d9585dd9d5aedb79e6",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/content-classification-2026-11-22-raidu.md",
+      "size": 5215,
+      "sha": "518d0d6f881ac3325c5f79a0c4722b665152a82f",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/content-review-2026-11-13.md",
+      "size": 4498,
+      "sha": "38d3af4eac77667ee30cef8e48410ff09f3ff2a9",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/defect-register.md",
+      "size": 18319,
+      "sha": "fc65f3de8ec3b9c8269619de6e777f7bd05990bc",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/link-review-2026-11-08.md",
+      "size": 1472,
+      "sha": "f7590264da0ab04ceef13f5eb430426630a1d3df",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/repo-settings.md",
+      "size": 3104,
+      "sha": "53fcc5b08df8157fa0c10aa8ffa7ed84e6f1df6b",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/user-guide/advanced.md",
+      "size": 5672,
+      "sha": "9ddc6b411f41f761076a5dd47f3e8cb65d24bef8",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/user-guide/beginner.md",
+      "size": 1419,
+      "sha": "0dde86040e0558860b1b94a4ec74980d60412e5a",
+      "mode": "100644"
+    },
+    {
+      "path": "docs/user-guide/intermediate.md",
+      "size": 1750,
+      "sha": "e28208a555b8a5d0288241faff07cbc72efb1e9a",
+      "mode": "100644"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "size": 667,
+      "sha": "927392a23179883d88fb4ab474e95b7e356261b8",
+      "mode": "100644"
+    },
+    {
+      "path": "fonts/OFL.txt",
+      "size": 4498,
+      "sha": "9766a6f8151480b4c1ecc9c7db89a6f2785ae84d",
+      "mode": "100644"
+    },
+    {
+      "path": "fonts/figtree-latin-ext-wght-normal.woff2",
+      "size": 10280,
+      "sha": "a8a112383ac0345ddab6d8373e5cc6a5a0213bb3",
+      "mode": "100644"
+    },
+    {
+      "path": "fonts/figtree-latin-wght-normal.woff2",
+      "size": 20156,
+      "sha": "05ce657de89207cf12c6a6457c4a1c83ea520626",
+      "mode": "100644"
+    },
+    {
+      "path": "index.html",
+      "size": 1237342,
+      "sha": "346d1831b40aa944e0184448233f7910bd833fb2",
+      "mode": "100644"
+    },
+    {
+      "path": "ops/automation.yaml",
+      "size": 5788,
+      "sha": "614ee6211bb5d3236db0d57b6e4eff2199116f91",
+      "mode": "100644"
+    },
+    {
+      "path": "ops/signals-scan-prompt.md",
+      "size": 6847,
+      "sha": "51ad96e444677b77beec90bd6959076b10c33101",
+      "mode": "100644"
+    },
+    {
+      "path": "playbook.css",
+      "size": 16184,
+      "sha": "95e0229ec836c17ba6c2516b634cff995953545e",
+      "mode": "100644"
+    },
+    {
+      "path": "playbook.html",
+      "size": 614,
+      "sha": "20d120defd962148e2e507e50de9f2e078f3b863",
+      "mode": "100644"
+    },
+    {
+      "path": "playbook.js",
+      "size": 12314,
+      "sha": "a24a96b574fbbbfc31a39b6b81f8fb9892a6f1ad",
+      "mode": "100644"
+    },
+    {
+      "path": "publiccode.yml",
+      "size": 1826,
+      "sha": "6e0ea7cc570a6265a1b097315915414efa3395bd",
+      "mode": "100644"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 59,
+      "sha": "032f8198bd2a69b4bb05743ace59278b0fa524ac",
+      "mode": "100644"
+    },
+    {
+      "path": "ruff.toml",
+      "size": 582,
+      "sha": "922b08d1dd47ce60b1ad16c313eba7249ce25d18",
+      "mode": "100644"
+    },
+    {
+      "path": "styles.css",
+      "size": 26663,
+      "sha": "938f7aa1cac8935c83a6b3141a7cd53fc4337d40",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_automation.py",
+      "size": 8630,
+      "sha": "b41cf09decda6ad99845b265458e374381bd473c",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_publiccode.py",
+      "size": 3442,
+      "sha": "8613c469807b384bb8b8fd6a61745ad9aeff8e5c",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/test_site.py",
+      "size": 14396,
+      "sha": "27b9553bba37f004cb74af518e3b940a3c43d7ee",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/artefact_check.py",
+      "size": 8773,
+      "sha": "01cc154d826ccad137ee9b025c551bba8b1cc4b7",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/build_playbook.py",
+      "size": 34939,
+      "sha": "63b5630e06aec112868091bae88a1f62b26b5783",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/build_signals.py",
+      "size": 4045,
+      "sha": "2e2353254dcd1d4eed0da34793d6aa16be01403a",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/build_static.py",
+      "size": 4453,
+      "sha": "b5ec9df8ab342232d7ec472eb6c20e8ca2ab9d2f",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/check_browser.py",
+      "size": 12185,
+      "sha": "e2f6b4ffa1b4863c631c17df0b98f2245da0825f",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/check_links.py",
+      "size": 3976,
+      "sha": "50fa5efdaa0bb6c0b29a21ff18031fec77a83315",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/check_site.py",
+      "size": 18334,
+      "sha": "f03fe5876c4bb8927a02e8d8339c4a5595946830",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/digest.py",
+      "size": 5825,
+      "sha": "d03b1f611f0a688a8aef07fb79e159b8856a689d",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/health.py",
+      "size": 1887,
+      "sha": "ac48eaa9cd6a145fbca1ea2fbf26cbbd3a9ae6ff",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/triage.py",
+      "size": 3827,
+      "sha": "e354badf3164982a6d50a9c90e3c43ca148751dd",
+      "mode": "100644"
+    },
+    {
+      "path": "tools/trials.py",
+      "size": 4680,
+      "sha": "7b7a5b7e7497ea7958e72ef8ef7b296defe98ba0",
+      "mode": "100644"
+    }
+  ]
+}

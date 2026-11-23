@@ -1,0 +1,97 @@
+{
+  "source": {
+    "commit": "9dd855ecfd8aece1b87c49eff2096b2d13d3fc98",
+    "release": "3.4.0",
+    "snapshot_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+    "licence": "CC-BY-4.0",
+    "publisher": "Em (cyberdudeuk) and contributors",
+    "checked_at": "2026-11-23T14:00:59Z",
+    "check_again": "2027-02-13"
+  },
+  "evidence": {
+    "baseline": {
+      "@id": "urn:okf:ai-capability-governance:evidence:baseline",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Worked example opening",
+      "source_value": "Every artefact filled in, including the ones that are uncomfortable. Very high volume, moderate criticality — the case most departments would call easy. Named honestly it lands in Tier 3 · Enhanced , and that is the most useful thing in this chapter.",
+      "source_value_sha256": "fd176af6032a56cef28a2de2a533adecc3fb6c617ff37b89e0946d1b3667ba38",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "send": {
+      "@id": "urn:okf:ai-capability-governance:evidence:send",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Variant where the agent sends its reply",
+      "source_value": "The agent sends the reply itself Tier moves + Irreversible Tier 4 · Critical Q1 · Automate with sampling L1 · Draft only — a person edits and commits every output One word in the mandate — send rather than draft — and an effect exists that no later correction undoes. Autonomy is forced to draft-only regardless of tier, and shadow mode becomes mandatory. This is the most common scope change requested after go-live, and the cheapest one to refuse.",
+      "source_value_sha256": "371ae30faf1c127718431c951a134234b07d0ae434bd9ffc35ed08e2e3ecfb05",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "reassessment": {
+      "@id": "urn:okf:ai-capability-governance:evidence:reassessment",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-raioperate",
+      "locator": "Reassessment trigger for new actions",
+      "source_value": "Action New tools, actions, schedules or agent links. Full",
+      "source_value_sha256": "7573701c34892ca0a6e53971276a5f3cac3a2f2ced8dd298c73b5d5acd132011",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "scope": {
+      "@id": "urn:okf:ai-capability-governance:evidence:scope",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Mandate / In scope",
+      "source_value": "Classify inbound correspondence to one of 34 work queues, extract sender, reference, subject and any stated deadline, and draft a suggested reply from the approved template set.",
+      "source_value_sha256": "7b5d0beeb87dd42eae75a09e3e3af9b8511ccb4732b6f9f10de6f765c9505662",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "decision": {
+      "@id": "urn:okf:ai-capability-governance:evidence:decision",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Mandate / Decision rights",
+      "source_value": "The agent proposes. A caseworker commits. Nothing leaves the organisation without a named person attached to it.",
+      "source_value_sha256": "4c461c90218f4868ed9237acb7c2b2081d3804acf321af4a1e7a915745d0f8ad",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    },
+    "exclusions": {
+      "@id": "urn:okf:ai-capability-governance:evidence:exclusions",
+      "type": "Pinned public source passage",
+      "url": "https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked",
+      "resource": "https://github.com/cyberdudeuk/ai-capability-governance/blob/9dd855ecfd8aece1b87c49eff2096b2d13d3fc98/index.html",
+      "source_artifact": "source/snapshots/em-index.html.gz (uncompressed hash)",
+      "source_sha256": "7576330b94fcdb8bfcd43493d65000f1944fc55312effe085cc0f768877e44a1",
+      "source_field": "#ch-worked",
+      "locator": "Mandate / Explicitly out of scope",
+      "source_value": "Deciding any case. Sending anything. Replying to anyone. Handling correspondence flagged as a complaint, a legal threat, a safeguarding concern or a data-subject request — those route to a human unopened by the agent.",
+      "source_value_sha256": "8f2e0cde9562dc2fc81475d317ddab9fdaf474a5995860460da19770a6334b7a",
+      "source_value_hash_canonicalization": "UTF-8; collapsed Unicode whitespace; trimmed",
+      "retrieved_at": "2026-11-23T14:00:59Z"
+    }
+  }
+}

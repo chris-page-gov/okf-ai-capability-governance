@@ -1,0 +1,53 @@
+Claude responded: No.
+Ran 4 commands
+
+Ran 4 commands
+
+No. The worked example does not authorise sending in your organisation. It is a published composite case. It records how the publisher, Em, handled the question, and it contains nothing from your organisation. I read the whole artefact, and the file hashes I checked match the build receipt.
+
+What changes if the agent sends its own reply
+
+The baseline. The agent sorts correspondence into queues and drafts a suggested reply from approved templates. A caseworker commits the action, so nothing leaves the organisation without a named person attached. The baseline sits at Tier 3 · Enhanced.
+The send variant. The publisher’s wording is that one word in the mandate, “send” rather than “draft”, creates an effect that no later correction undoes. The example moves to Tier 4 · Critical.
+Autonomy stays capped. The cap remains L1 · Draft only, so a person still edits and commits every output. The publisher says autonomy is forced to draft-only whatever the tier. Read plainly, the example refuses the change. It does not describe a safe way to hand over sending.
+Shadow mode becomes mandatory. The pilot suggests running the agent beside human handling with sending switched off, and keeping evidence of how the draft-only boundary and escalation worked. These are described as illustrative test ideas.
+Reassessment. The playbook calls for a fresh assessment whenever new actions are added. The evidence brief asks for the changed mandate, the shadow-mode results, unresolved issues and a named local reviewer’s decision.
+Excluded correspondence. The baseline already keeps complaints, legal threats, safeguarding concerns and data-subject requests away from the agent. They go to a human unopened.
+
+Why it doesn’t authorise sending for you
+
+The bundle says it contains no local appointment, approval or real correspondence.
+Every concept is marked draft.
+The graph labels its assertions as a synthetic fixture and a “published composite or pilot interpretation”.
+The visualisation says the local decision is open and that your organisation must supply the test evidence, reviewer and decision record.
+
+What I couldn’t establish
+
+Who your local reviewer is.
+Whether your organisation uses the same tiers.
+Whether any local sign-off exists.
+I haven’t checked the live publisher page. Everything above comes from the bundle’s own pinned extracts.
+
+Bundle files I relied on
+
+bundle/concepts/mandate.md
+bundle/concepts/send-variant.md
+bundle/concepts/draft-only.md
+bundle/concepts/shadow-mode.md
+bundle/concepts/evidence-brief.md
+bundle/evidence.json, for the pinned source passages and hashes
+bundle/relationships.yamlld, for the synthetic-fixture scope. I also confirmed relationships.jsonld parses.
+bundle/index.md, bundle/log.md and build-receipt.json, for provenance and checks. The pinned source is release 3.4.0, commit 9dd855ec…, licensed CC-BY-4.0, with a recheck date of 13 February 2027.
+
+Original publisher link for the decision that matters (the send variant, under “Variant where the agent sends its reply”): https://cyberdudeuk.github.io/ai-capability-governance/#ch-worked
+
+The reassessment trigger is in a different chapter: https://cyberdudeuk.github.io/ai-capability-governance/#ch-raioperate
+
+As a new delivery officer, the safest reading is that sending needs a local reassessment, shadow-mode evidence and a named decision-maker before anyone treats it as allowed.
+
+
+
+
+
+
+just now

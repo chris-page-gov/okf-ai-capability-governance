@@ -1,0 +1,56 @@
+{
+  "operation": "validate",
+  "sandbox": "macos-sandbox-exec",
+  "package": "1.0.0",
+  "bundle": "generated/site-bundle",
+  "inspection": {
+    "markdown_sha256": {
+      "index.md": "0ec294904977b8f0a31752f0e615bfb2a2ad0980d8e6fd7b2b27926ca0fcdca0",
+      "log.md": "cae1d47cfd744e7a56bac0e29eaf841886ab1360ace7760d7813c7663eb18c1c",
+      "sections/assurance.md": "21fba180412799512d63d86fdd0f7e836108c15450ea806dbc195fc7671aa322",
+      "sections/catalogue.md": "a475f1149aa6163456e921090d56bbb5ad63ab29b05abea90673396ff4f54106",
+      "sections/contact.md": "84e4a9f9e42faab6055e4b7cb6b87d0674fa4159fe8ddcecbdeb8a91adcf04b8",
+      "sections/glossary.md": "292d93ec9499c7d2b83c994c2ddb5cdbb3afc258a85c11efff6641dd47cc5da4",
+      "sections/knowledge.md": "b17324f80312c1cc0c5a6bbf82b65d3f4aea7de3fb06e5d8d3e161bcb838a188",
+      "sections/page-shell.md": "27dccbc2dc71a50f17b39da61b6558d246021084b54bb8bc92b5cec323d620bf",
+      "sections/part-assure-and-govern.md": "959da88c599a7dc1590c7c7570a36848c511205528ed14f5b80f0724063e1b06",
+      "sections/part-decide-and-prioritise.md": "42e7fa013f02cd6976e5502b721a1d4dee5e4ac2d0e1592b74a841ba44f93cab",
+      "sections/part-deploy-for-real.md": "52656f76454240f24636ba8e53848bf96024fb16248613f14020e93a8f172ae0",
+      "sections/part-design-and-build.md": "2a295df6cc50cd6e4cabac690473c0a3f9af58040e5228f34e1872c5d3d816ae",
+      "sections/part-fund-and-buy.md": "2400b3724cd9d605cfdc3b50f9d8180d0c612e01fea33e22227338ac7566dda8",
+      "sections/part-knowledge-and-navigation.md": "3988621908099af215aee367fbf8106af69a7bbe69ccc2d0bf6ead2135293c04",
+      "sections/part-live-pilot.md": "aa1276b69d681220f180b6b32969ea2048c2969d1ba71c86e0686919917c6da4",
+      "sections/part-operate-and-oversee.md": "bfb16f3ca998b05d0ee444dff5f651df6ef4e605f4f2d11d4f572054d09213c9",
+      "sections/part-people-and-adoption.md": "5fc353f676ba93a6dbd3796aac52769d94d57e86784c7b69cdb141e38b3ab080",
+      "sections/part-product-documentation.md": "66fff81a431adead4b1134fd4290877c3fa9b78f9be4bf8d43830e900f8a049d",
+      "sections/part-reference.md": "afd3b204aa53ddad1d2000dbfbb1eec2edb088efcc62b2c503c567d2863a589b",
+      "sections/part-start-here.md": "2db0720957ecd9178c8e3c9ad9ea42c1aba8bb78d729ef5f110a3aa73311293c",
+      "sections/playbook.md": "31c23520a7184a300ee4d006656d4dc33a266e68700342a2fd830cf1ed180bc0",
+      "sections/practice.md": "7c99ca8d3c0f41367cc4a79b60e484731fb16e721b863ef38c3c6f0d4e1c84f3",
+      "sections/resources.md": "fac18d4358a1765a5f35c97f3d35127b2a869305f8ac78c2e010102e28f30580",
+      "sections/roadmap.md": "7ece5d7b8238ec7ac1adc624384477e0fbe6df2d89d6bb1246be219fe8d3eeea",
+      "sections/signals.md": "d05106d6510081ca631a0006d7ff2786baa60c6648bd31333edf1aca167aa486",
+      "sections/start-here.md": "fedbe693707c38d6b5e97d5ac326078779a5a5cfef1b68068762f259e8835d99",
+      "sections/tool-route.md": "436a06e80984a6b21ffc080c5f1290aa66174c480f2d06ea68c1a444ab8e0ff3",
+      "sections/toolkit.md": "3638fa8ac842e3a20dc89b0de317b74b039ddf99d3d67077cd306e4a9a46afb7",
+      "sections/tools.md": "0e13dca65bc5c784bd199f8ba7a63d1d93f9fb0cca72b84bf654665ddc79ca79",
+      "sections/top.md": "ca837ef35f29af73b2ba49233fa38444729a0f0a867e4e80226c2faeebbadbaf",
+      "sections/transparency.md": "20092e37ba9a23e4350b65e32850806b478b5a91c3c89d5311fd628c3534b352",
+      "sections/ucd.md": "e17597aeac6d0277ab9606818d5b7b66fb1d5123de6f011073e7e11ceb7e1da7"
+    },
+    "markdown_bytes": 727616,
+    "excluded_nested_roots": [
+      "correspondence"
+    ],
+    "asset_contents": "not-read"
+  },
+  "report": {
+    "bundle": "<isolated-bundle>",
+    "okf_version": "0.3",
+    "files_checked": 32,
+    "errors": 0,
+    "warnings": 0,
+    "info": 0,
+    "findings": []
+  }
+}

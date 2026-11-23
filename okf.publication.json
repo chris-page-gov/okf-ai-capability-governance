@@ -1,0 +1,41 @@
+{
+  "schema": "okf-repository-publication-contract.v1",
+  "repository": {
+    "name": "okf-ai-capability-governance",
+    "role": "governed-producer",
+    "root_index": "generated/site-bundle/index.md",
+    "lifecycle": "public-pilot"
+  },
+  "semantic_contract": {
+    "path": "okf.semantic.json",
+    "profile": "urn:okf:ai-capability-governance:profile:v1"
+  },
+  "boundaries": {
+    "authored": [
+      "source/",
+      "profiles/",
+      "scripts/"
+    ],
+    "generated": [
+      "generated/",
+      "downloads/"
+    ],
+    "excluded": [
+      "generated/"
+    ]
+  },
+  "publication": {
+    "authorised": true,
+    "targets": [
+      "https://github.com/chris-page-gov/okf-ai-capability-governance"
+    ],
+    "release_status": "public-pilot"
+  },
+  "validation": {
+    "graph": "scripts/build.py --check",
+    "core": "installed guarded okf-plus-generate validator",
+    "consumer": "installed guarded okf-plus-consume scanner and offline browser",
+    "source_archive": "scripts/build_site.py --check",
+    "downloads": "scripts/check_downloads.py"
+  }
+}

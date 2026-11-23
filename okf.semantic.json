@@ -1,0 +1,123 @@
+{
+  "schema": "okf-repository-semantic-contract.v1",
+  "repository": {
+    "name": "okf-ai-capability-governance",
+    "role": "governed-producer",
+    "root_index": "generated/site-bundle/index.md"
+  },
+  "okf_core": {
+    "version": "0.3",
+    "specification": "https://github.com/open-knowledge-format/open-knowledge-format/blob/527e81aff55992be21507e97004286789126f88c/SPEC.md",
+    "status": "fixture"
+  },
+  "semantic_layer": {
+    "profile": "urn:okf:ai-capability-governance:profile:v1",
+    "state": "generated-yaml-ld-graph",
+    "authoritative_inputs": [
+      "source/pilot.json",
+      "source/snapshots/em-index.html.gz",
+      "source/visualisation.html",
+      "profiles/semantic-assertion.schema.json",
+      "source/site-snapshot.json",
+      "source/snapshots/site/",
+      "source/snapshots/em-code-LICENSE.txt"
+    ],
+    "outputs": [
+      {
+        "path": "generated/bundle/relationships.jsonld",
+        "generated": true,
+        "required": true,
+        "role": "semantic-graph"
+      },
+      {
+        "path": "generated/bundle/relationships.yamlld",
+        "generated": true,
+        "required": true,
+        "role": "semantic-graph"
+      },
+      {
+        "path": "generated/bundle/index.md",
+        "generated": true,
+        "required": true,
+        "role": "core-index"
+      },
+      {
+        "path": "generated/visualisation.html",
+        "generated": true,
+        "required": true,
+        "role": "visualisation"
+      },
+      {
+        "path": "generated/site-bundle/index.md",
+        "generated": true,
+        "required": true,
+        "role": "source-archive-index"
+      },
+      {
+        "path": "generated/site-bundle/coverage-receipt.json",
+        "generated": true,
+        "required": true,
+        "role": "coverage-evidence"
+      }
+    ],
+    "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
+    "identity_policy": "absolute-semantic-iri-plus-validated-local-route",
+    "limitations": [
+      "Local 0.3 pilot profile. The 0.2 Explorer reconciler does not cover this core version.",
+      "The full-site projection is a source archive. Qualified semantics cover the correspondence case only."
+    ]
+  },
+  "relationship_contract": {
+    "schema": "https://chris-page-gov.github.io/okf-explorer/profile/bundle-wiki/v1/semantic-assertion.schema.json",
+    "authoring": "source/pilot.json",
+    "direct_triple_policy": "generated-from-qualified-assertions",
+    "predicate_policy": "absolute-iri",
+    "required_fields": [
+      "@id",
+      "@type",
+      "source",
+      "predicate",
+      "target",
+      "kind",
+      "label",
+      "inverse_label",
+      "assertion_status",
+      "assertion_scope",
+      "authority",
+      "derivation",
+      "observed_at",
+      "evidence",
+      "rights"
+    ]
+  },
+  "tooling": {
+    "setup": [],
+    "build": [
+      "scripts/build.py",
+      "scripts/build_site.py"
+    ],
+    "check": [
+      "scripts/build.py --check",
+      "scripts/build_site.py --check"
+    ]
+  },
+  "reader": {
+    "consumer": "offline pilot browser and OKF 0.3 Markdown reader",
+    "delivery": "markdown-plus-embedded-context-jsonld",
+    "preserves": [
+      "direction",
+      "semantic-identities",
+      "local-routes",
+      "predicate",
+      "relationship-kind",
+      "preferred-and-inverse-labels",
+      "assertion-status-and-scope",
+      "authority",
+      "derivation",
+      "evidence",
+      "rights",
+      "freshness",
+      "lifecycle"
+    ]
+  }
+}

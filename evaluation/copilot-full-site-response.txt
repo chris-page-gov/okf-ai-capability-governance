@@ -1,0 +1,43 @@
+Copilot said:
+Reasoned for 10s
+Spot-check result
+
+I could read the supplied bundle, okf-pilot-site-spot-check. I used:
+
+index.md
+concepts/mandate.md
+concepts/send-variant.md
+concepts/draft-only.md
+concepts/shadow-mode.md
+concepts/evidence-brief.md
+evidence.json
+sections/transparency.md
+Portal review and problem reporting
+Em’s next portal review date: 13 February 2027. sections/transparency.md, under “Ownership and review”, records version 3.4.0, last reviewed on 22 November 2026, with the next review due on 13 February 2027. The bundle’s evidence.json independently uses the same date as check_again, and the concepts have stale_after: 2027-02-13.
+Where to report a problem: use the portal’s GitHub contact/issue form to report a broken link, outdated claim, accessibility barrier or content gap. The supplied text says contact is “by the GitHub contact form only”, but does not reproduce the form’s direct URL. Use the publisher’s How to check, challenge and contribute section to reach the reporting route. Accessibility issues are stated to receive a response within five working days.
+Does the worked example give local authority for an agent to send replies?
+
+No.
+
+In Em’s worked example, the mandate says:
+
+the agent may classify correspondence and draft a suggested reply;
+a caseworker commits the action;
+“sending anything” and “replying to anyone” are explicitly outside scope.
+
+See concepts/mandate.md and Em’s worked example.
+
+concepts/send-variant.md discusses a proposed change in which the agent sends a reply, but it does not authorise that change locally. Em’s composite example treats sending as an irreversible effect, moves the case to Tier 4 · Critical, keeps the autonomy cap at L1 · Draft only, and makes shadow mode mandatory. concepts/draft-only.md confirms that a person edits and commits every output.
+
+The pilot also states that:
+
+all concepts are drafts;
+the evidence brief is only an illustrative template;
+the bundle contains no local appointment, approval or real correspondence;
+introducing a new action or permission requires reassessment and a named local reviewer’s decision.
+
+Therefore, the worked example supplies governance evidence for why sending should remain unavailable pending review. It does not provide [tenant name] County Council, or any other local authority, with a mandate or approval for an agent to send replies. A local decision-maker would still need to establish the changed mandate, accountable owner, approval, controls, shadow-mode evidence, escalation arrangements and the formal decision authorising any deployment. See concepts/evidence-brief.md and the publisher’s worked example.
+
+okf-pilot-site-spot-check
+[account name] modified a few seconds ago
+Sources

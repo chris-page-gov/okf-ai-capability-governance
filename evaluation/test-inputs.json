@@ -1,0 +1,9 @@
+{
+  "observed_date": "2026-11-23",
+  "sha256": {
+    "okf-ai-capability-governance-pilot.zip": "ac11c3388b4432dec645e4f2563491e532c3629f22f35dc036ca73a0949dd773",
+    "okf-ai-capability-governance-full-site.zip": "faa1b8f49ad9cd9fa991d3e54acf34b43725ad8117e855b8739b27d364cda8db",
+    "okf-pilot-reading-copy.txt": "e165aea55b6e685ede84b4fd92e904e522cd3397d16b378a3639f17182370e81",
+    "okf-pilot-site-spot-check.txt": "f1b0bfb296e4b356e3cb28ddcf387f28846c78a3e35256aa77e47bc7daa3776b"
+  }
+}

@@ -1,0 +1,54 @@
+Copilot said:
+
+Yes. I can read the supplied okf-pilot-reading-copy, and the points below are established from that artefact.
+
+What changes if the agent sends the reply itself?
+
+The baseline is draft-only: the agent classifies correspondence and drafts a suggested reply, but a caseworker commits the action. Sending, replying and deciding cases are explicitly outside its mandate.
+
+Giving the agent a send action is therefore not a small technical change. In the worked variant:
+
+sending creates an irreversible effect;
+the case moves from Tier 3 · Enhanced to Tier 4 · Critical;
+the autonomy cap remains L1 · Draft only, meaning a person edits and commits every output;
+shadow mode becomes mandatory; and
+introducing the new action triggers reassessment.
+
+There is a deliberate tension in the example: it considers the proposed capability to send, but the resulting control decision keeps the actual autonomy at draft-only. In practical terms, the example says that merely changing the mandate from “draft” to “send” materially changes the risk and governance position.
+
+Does the worked example authorise sending in your organisation?
+
+No.
+
+The bundle expressly says that it is an illustrative pilot and contains“no local appointment, approval or real correspondence”. Its evidence brief requires the named local reviewer’s decision to be recorded. All of the concepts are also marked as drafts.
+
+So, for [tenant name], this artefact is evidence about how to assess the proposed change, not evidence that [tenant name] has authorised an agent to send correspondence.
+
+I cannot establish from this artefact that any [tenant name] decision-maker has approved autonomous sending. You would need separate local evidence of that decision.
+
+Bundle files I relied on
+
+Within okf-pilot-reading-copy, I relied on these reproduced bundle files:
+
+index.md for the overall case, provenance and navigation.
+concepts/mandate.md for the current scope and decision rights.
+concepts/send-variant.md for what changes when sending is proposed.
+concepts/draft-only.md for the human commitment requirement.
+concepts/shadow-mode.md for the mandatory shadow-mode control.
+concepts/evidence-brief.md for reassessment and the need for a local reviewer decision.
+evidence.json for the pinned underlying passages, publisher details, provenance and source URLs.
+Original publisher link for the decision that matters
+
+The decisive baseline rule recorded in evidence.json is:
+
+“The agent proposes. A caseworker commits. Nothing leaves the organisation without a named person attached to it.”
+
+The bundle identifies its original publisher location as“Mandate / Decision rights” in the public worked example:
+
+Publisher’s worked example – Mandate / Decision rights
+
+Bottom line for a new delivery officer: treat a request to let the correspondence agent send replies as a change of mandate requiring reassessment and a local decision, not as a configuration change already authorised by this worked example.
+
+okf-pilot-reading-copy
+[account name] modified a few seconds ago
+Sources
