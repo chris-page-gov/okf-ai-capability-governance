@@ -7,3 +7,4 @@
 - Captured the complete pinned Pages deployment and indexed the portal’s static sections, HTML elements, links and controls.
 - Added an illustrated beginner walkthrough and a four-client evaluation with portable reading and drafting skills.
 - Published the companion repository with the exact evaluated downloads and a reproducible pull request check.
+- Pinned the validation runner to Ubuntu 24.04, which supplies the checked Python version.

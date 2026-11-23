@@ -6,3 +6,4 @@
 - Publisher-owner discovery found 20 visible public repositories. The title filter identified this source repository. Its non-truncated recursive tree contains 90 files and no index.md. Other repositories remain outside the inspected scope.
 - The curated semantic profile covers the correspondence case. The site archive preserves source structure and bytes.
 - The checked downloads are available from the repository. GitHub Actions rebuilds both archives and checks their contents against the published files.
+- Validation uses Ubuntu 24.04 with the Python 3.12.11 build used for the pilot.
