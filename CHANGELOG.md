@@ -8,3 +8,4 @@
 - Added an illustrated beginner walkthrough and a four-client evaluation with portable reading and drafting skills.
 - Published the companion repository with the exact evaluated downloads and a reproducible pull request check.
 - Pinned the validation runner to Ubuntu 24.04, which supplies the checked Python version.
+- Added a GitHub Pages companion with a browsable archive, illustrated evaluation, machine discovery and exact-commit verification.

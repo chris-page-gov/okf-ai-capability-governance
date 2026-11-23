@@ -4,6 +4,8 @@ An independent OKF 0.3 archive of Em’s *AI Capability Governance and Implement
 
 ## Open the pilot
 
+[Open the GitHub Pages companion](https://chris-page-gov.github.io/okf-ai-capability-governance/) · [OKF discovery descriptor](https://chris-page-gov.github.io/okf-ai-capability-governance/.well-known/okf.json)
+
 1. Read the [illustrated beginner walkthrough](evaluation/BEGINNER-WALKTHROUGH.md) for the original website and the bundle.
 2. Download the [full-site ZIP](downloads/okf-ai-capability-governance-full-site.zip). Extract it and open **index.md** for the sections and source inventory.
 3. Open **correspondence-visualisation.html** from the extracted full-site ZIP in a browser. Choose **Draft replies** or **Propose sending replies**. Select a relationship to inspect its supporting source.
@@ -21,6 +23,8 @@ python scripts/build.py
 python scripts/build_site.py
 python scripts/prepare_clients.py
 python scripts/check_downloads.py
+python scripts/build_pages.py
+python scripts/build_pages.py --check
 ```
 
 The check matches public download hashes to the evaluation record and rebuilt contents to the published files. The guarded Codex checks used the reviewed Explorer tooling at commit d0c5ad26843dd0e5ab1e7f9357838719ae9c3f83.
@@ -32,4 +36,4 @@ The check matches public download hashes to the evaluation record and rebuilt co
 
 The installed guarded Codex skills validated both bundle roots and scanned the curated correspondence bundle. The frozen Explorer Bundle Wiki v1 profile targets OKF 0.2. This independent 0.3 profile reuses its assertion schema with a local validator, so the profile claim is scoped to this repository. [Pinned OKF 0.3 specification](https://github.com/open-knowledge-format/open-knowledge-format/blob/527e81aff55992be21507e97004286789126f88c/SPEC.md) · [Explorer standards register](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md) · [Machine register](https://github.com/chris-page-gov/okf-explorer/blob/main/registry/okf-standards.json)
 
-This public repository hosts the draft pilot and its evaluation. A GitHub Actions validation check runs on pull requests and updates to main. [Repository status](REPOSITORY_STATUS.md) · [Licensing and attribution](LICENSE_DECISIONS.md)
+GitHub Pages publishes the draft pilot from protected main after build validation. The deployment job checks the served manifest and files against that build. The repository also provides the exact ZIPs and reading copies from the evaluation. [Repository status](REPOSITORY_STATUS.md) · [Licensing and attribution](LICENSE_DECISIONS.md)
