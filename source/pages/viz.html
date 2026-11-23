@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>AI capability governance | Standalone OKF+ reader</title>
+<link rel="icon" href="__ICON__">
+<style>__STYLE__</style>
+</head>
+<body>
+<a class="skip" href="#reader">Skip to the reader</a>
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">OKF 0.3 · Standalone reader</p>
+      <h1>AI capability governance</h1>
+      <p>Browse Em’s public playbook archive and follow the evidence behind the correspondence agent’s proposed send action.</p>
+    </div>
+    <a href="__BUNDLE_URL__" class="archive-link">Download the full OKF ZIP</a>
+  </div>
+</header>
+<main class="wrap" id="reader">
+  <nav aria-label="Reader views" id="views">
+    <a href="#case" data-view="case">Worked case</a>
+    <a href="#archive" data-view="archive">Site archive</a>
+    <a href="#walkthroughs" data-view="walkthroughs">Walkthroughs</a>
+  </nav>
+  <div class="workspace">
+    <aside class="navigation" aria-label="Browse the bundle">
+      <section id="graph-card" aria-labelledby="graph-title">
+        <h2 id="graph-title">Follow the decision</h2>
+        <p>Select a concept to read it or a relationship to inspect its source.</p>
+        <div id="graph"></div>
+      </section>
+      <section class="search-panel" aria-labelledby="search-title">
+        <h2 id="search-title">Find a document</h2>
+        <label for="query">Search the current view</label>
+        <input id="query" type="search" autocomplete="off">
+        <div class="filters">
+          <div>
+            <label for="kind">Document type</label>
+            <select id="kind"><option value="">All types</option></select>
+          </div>
+          <button id="reset" type="button">Clear filters</button>
+        </div>
+        <p id="result-count" role="status"></p>
+        <ul id="results" aria-label="Matching documents"></ul>
+      </section>
+    </aside>
+    <div class="reading">
+      <article id="record" aria-labelledby="record-title">
+        <header class="record-header">
+          <p id="record-kind" class="eyebrow"></p>
+          <h2 id="record-title" tabindex="-1"></h2>
+          <p id="record-summary"></p>
+          <dl id="record-meta"></dl>
+        </header>
+        <div id="record-body" class="document"></div>
+        <section id="record-links" aria-labelledby="links-title" hidden>
+          <h3 id="links-title">Linked concepts</h3>
+          <ul id="links-list"></ul>
+        </section>
+      </article>
+      <section id="relationship" aria-labelledby="relationship-title" hidden>
+        <a id="back-to-concept">Back to the concept</a>
+        <p class="eyebrow">Evidence for a relationship</p>
+        <h2 id="relationship-title" tabindex="-1"></h2>
+        <p id="direction" class="direction"></p>
+        <dl id="relationship-meta"></dl>
+        <blockquote id="passage"></blockquote>
+        <ul class="source-links">
+          <li><a id="publisher">Open the publisher’s passage</a></li>
+          <li><a id="pinned">Inspect the pinned source revision</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
+<noscript><p class="wrap">Enable JavaScript to use the reader. <a href="__BUNDLE_URL__">Download the OKF bundle files</a>.</p></noscript>
+<footer class="wrap">
+  <p>Independent draft adaptation of Em’s release __UPSTREAM_RELEASE__. <a href="__HOME_URL__">Companion site</a> · <a href="__SOURCE_URL__">Em’s original website</a></p>
+</footer>
+<script type="application/json" id="bundle-data">__PAYLOAD__</script>
+<script>__SCRIPT__</script>
+</body>
+</html>

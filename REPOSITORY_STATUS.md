@@ -12,3 +12,6 @@ Pages is built from the declared site inventory on protected main. The deploymen
 checks the live manifest against the exact source commit and validated file hashes.
 The site provides its own OKF discovery descriptor, reading list, human pages and
 raw OKF roots. Explorer’s central public catalogue is maintained separately.
+
+The single-file reader is a generated Pages projection of the same checked
+bundle, archive text and evaluation. Its graph covers the worked case.

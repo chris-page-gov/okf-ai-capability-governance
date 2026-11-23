@@ -20,7 +20,10 @@
       "profiles/semantic-assertion.schema.json",
       "source/site-snapshot.json",
       "source/snapshots/site/",
-      "source/snapshots/em-code-LICENSE.txt"
+      "source/snapshots/em-code-LICENSE.txt",
+      "source/pages/viz.html",
+      "source/pages/viz.css",
+      "source/pages/viz.js"
     ],
     "outputs": [
       {
@@ -58,6 +61,12 @@
         "generated": true,
         "required": true,
         "role": "coverage-evidence"
+      },
+      {
+        "path": "_site/viz.html",
+        "generated": true,
+        "required": true,
+        "role": "standalone-reader"
       }
     ],
     "context_policy": "pinned-local-contexts-no-browser-remote-expansion",
@@ -94,11 +103,13 @@
     "setup": [],
     "build": [
       "scripts/build.py",
-      "scripts/build_site.py"
+      "scripts/build_site.py",
+      "scripts/build_pages.py"
     ],
     "check": [
       "scripts/build.py --check",
-      "scripts/build_site.py --check"
+      "scripts/build_site.py --check",
+      "scripts/build_pages.py --check"
     ]
   },
   "reader": {

@@ -13,6 +13,15 @@ An independent OKF 0.3 archive of Em’s *AI Capability Governance and Implement
 
 The full-site bundle preserves the pinned static site and classifies external destinations as links. The browser’s live calculators and other interactive workflows remain on the publisher’s site. The five curated concepts cover the correspondence case only. [Em’s website](https://cyberdudeuk.github.io/ai-capability-governance/)
 
+## Standalone reader
+
+[Open viz.html](https://chris-page-gov.github.io/okf-ai-capability-governance/viz.html) or save the HTML file from the Pages home page.
+It embeds the searchable archive text, the worked-case relationship graph and both
+illustrated guides. It follows the browsing pattern in the reference
+[OKF example](https://github.com/open-knowledge-format/open-knowledge-format/blob/527e81aff55992be21507e97004286789126f88c/bundles/acme_retail/viz.html).
+Publisher citations and the canonical ZIP are links. The ZIP carries the original
+snapshot bytes alongside the Markdown and semantic files.
+
 ## Reproduce and check
 
 From this repository, use Python 3.12.11 in a virtual environment.
