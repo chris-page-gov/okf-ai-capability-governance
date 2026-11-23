@@ -18,7 +18,7 @@ from build import ROOT, SITE, digest, encode
 
 OUTPUT = ROOT / '_site'
 GENERATED = ROOT / 'generated'
-ASSETS = ('index.html', 'site.css')
+ASSETS = ('index.html', 'site.css', 'favicon.png')
 REPORTS = (
     'evaluation/BEGINNER-WALKTHROUGH.md', 'evaluation/CLIENT-EVALUATION.md',
     'evaluation/codex-response.md', 'evaluation/claude-response.txt',
@@ -78,6 +78,7 @@ def render_page(route, data, html_routes, markdown):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} | AI capability governance</title>
+<link rel="icon" href="{to_root}favicon.png">
 <link rel="stylesheet" href="{to_root}site.css">
 </head>
 <body>
@@ -133,6 +134,10 @@ def build():
         if digest(data) != expected:
             raise ValueError(f'Pilot receipt mismatch: {route}')
         files['compare.html' if route == 'visualisation.html' else route] = data
+    for route, icon in (('compare.html', 'favicon.png'),
+                        ('site-bundle/correspondence-visualisation.html', '../favicon.png')):
+        link = f'<link rel="icon" href="{icon}">\n</head>'.encode()
+        files[route] = files[route].replace(b'</head>', link, 1)
     inputs = json.loads(files['evaluation/test-inputs.json'])
     for name, expected in inputs['sha256'].items():
         route = f'downloads/{name}'
