@@ -16,6 +16,8 @@
   the upstream revision separate from changes to local case annotations.
 - Reject changes outside declared lifecycle boundaries and enforce documentation
   and changelog updates for controlled changes.
+- Declare the GitHub release target and exact-candidate promotion procedure,
+  with draft and published asset read-back and release-attestation verification.
 
 ## 23 November 2026
 

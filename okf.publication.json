@@ -150,6 +150,10 @@
       {
         "path": "requirements.txt",
         "role": "policy"
+      },
+      {
+        "path": "docs/releasing.md",
+        "role": "documentation"
       }
     ],
     "generated": [
@@ -253,7 +257,8 @@
         "README.md",
         "REPOSITORY_STATUS.md",
         "CHANGELOG.md",
-        "source/pages/**"
+        "source/pages/**",
+        "docs/releasing.md"
       ],
       "command_ids": [
         "check-contract",
@@ -485,7 +490,8 @@
     "documentation_paths": [
       "README.md",
       "REPOSITORY_STATUS.md",
-      "CHANGELOG.md"
+      "CHANGELOG.md",
+      "docs/releasing.md"
     ],
     "changelog_path": "CHANGELOG.md",
     "check_command_id": "check-contract",
@@ -525,11 +531,12 @@
     "mode": "automatic-protected-main",
     "scope": "bounded-demonstrator",
     "authority": {
-      "decision": "The existing public research pilot publishes from protected main after validation. The source archive and illustrative case retain their separate limits.",
+      "decision": "The existing public research pilot publishes from protected main after validation. The source archive and illustrative case retain their separate limits. After exact public acceptance, the owner-authorised GitHub release freezes the same accepted Actions artifact without rebuilding it.",
       "evidence_paths": [
         "AGENTS.md",
         "REPOSITORY_STATUS.md",
-        ".github/workflows/validate.yml"
+        ".github/workflows/validate.yml",
+        "docs/releasing.md"
       ]
     },
     "candidate_policy": "promote-exact-assured-bytes-without-rebuild",
@@ -539,6 +546,14 @@
         "kind": "github-pages",
         "workflow_path": ".github/workflows/validate.yml",
         "public_base_url": "https://chris-page-gov.github.io/okf-ai-capability-governance/",
+        "exact_commit_required": true,
+        "promote_without_rebuild": true
+      },
+      {
+        "id": "github-release",
+        "kind": "github-release",
+        "workflow_path": ".github/workflows/validate.yml",
+        "public_base_url": "https://github.com/chris-page-gov/okf-ai-capability-governance/releases/",
         "exact_commit_required": true,
         "promote_without_rebuild": true
       }
