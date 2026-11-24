@@ -18,6 +18,8 @@
   and changelog updates for controlled changes.
 - Declare the GitHub release target and exact-candidate promotion procedure,
   with draft and published asset read-back and release-attestation verification.
+- Fix the public guides' missing icon declaration, which caused a root-domain
+  favicon request to return 404 during real-browser release acceptance.
 
 ## 23 November 2026
 
