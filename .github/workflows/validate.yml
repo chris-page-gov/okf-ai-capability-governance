@@ -10,38 +10,126 @@ permissions:
   contents: read
 
 jobs:
-  validate:
-    name: validate
+  core:
+    name: core
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
     outputs:
       manifest_sha256: ${{ steps.identity.outputs.manifest_sha256 }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9
         with:
-          python-version: '3.12.11'
-      - run: python -m pip install --requirement requirements.txt
-      - run: |
-          python scripts/build.py
-          python scripts/build_site.py
-          python scripts/prepare_clients.py
-          python scripts/build.py --check
-          python scripts/build_site.py --check
-          python scripts/check_downloads.py
-          python scripts/build_pages.py
-          python scripts/build_pages.py --check
+          version: '0.13.4'
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+      - run: uv python install 3.12.11 && uv sync --locked
+      - name: Build and check the frozen sources and distinct companions
+        run: |
+          uv run --locked python scripts/build.py
+          uv run --locked python scripts/build_site.py
+          uv run --locked python scripts/prepare_clients.py
+          uv run --locked python scripts/build_explorer_companions.py
+          uv run --locked python scripts/build.py --check
+          uv run --locked python scripts/build_site.py --check
+          uv run --locked python scripts/check_downloads.py
+          uv run --locked python scripts/build_explorer_companions.py --check
+          uv run --locked python -m unittest discover -s tests -v
+          uv run --locked python scripts/build_pages.py
+          uv run --locked python scripts/build_pages.py --check
+      - name: Check lifecycle and documentation lockstep
+        env:
+          OKF_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$OKF_BASE" ] && [ "$OKF_BASE" != '0000000000000000000000000000000000000000' ]; then
+            uv run --locked python scripts/check_contracts.py --base "$OKF_BASE"
+          else
+            uv run --locked python scripts/check_contracts.py
+          fi
       - name: Record candidate identity
         id: identity
         run: printf 'manifest_sha256=%s\n' "$(sha256sum _site/publication.json | cut -d ' ' -f 1)" >> "$GITHUB_OUTPUT"
+      - name: Retain the exact candidate for browser checks
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: capability-pages-${{ github.sha }}
+          path: _site
+          include-hidden-files: true
+          retention-days: 14
       - name: Upload the Pages candidate
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: _site
           include-hidden-files: true
+
+  browser:
+    name: browser
+    needs: core
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Check out the reviewed Reader
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: chris-page-gov/okf-explorer
+          ref: 3b74ef36a2fab974e8fd82519fa77344228140a7
+          path: consumer
+          persist-credentials: false
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          version: 10.34.7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.22.3'
+          cache: pnpm
+          cache-dependency-path: consumer/apps/okf-explorer/pnpm-lock.yaml
+      - run: pnpm --dir consumer/apps/okf-explorer install --frozen-lockfile
+      - name: Install the declared native acceptance browser
+        timeout-minutes: 5
+        run: pnpm --dir consumer/apps/okf-explorer exec playwright install chromium
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
+        with:
+          name: capability-pages-${{ github.sha }}
+          path: _site
+      - name: Verify the correspondence bundle in the native Reader
+        run: pnpm --dir consumer/apps/okf-explorer acceptance:bundle -- --bundle-root "$GITHUB_WORKSPACE/_site/bundle" --journeys "$GITHUB_WORKSPACE/_site/bundle/walkthrough.explorer-journeys.json" --output "$RUNNER_TEMP/correspondence-native.json" --port 4291
+      - name: Verify the source archive in the native Reader
+        run: pnpm --dir consumer/apps/okf-explorer acceptance:bundle -- --bundle-root "$GITHUB_WORKSPACE/_site/site-bundle" --journeys "$GITHUB_WORKSPACE/_site/site-bundle/walkthrough.explorer-journeys.json" --output "$RUNNER_TEMP/archive-native.json" --port 4292
+      - name: Check both responsive guide journeys and every served asset
+        env:
+          OKF_EXPLORER_ROOT: ${{ github.workspace }}/consumer
+        run: timeout 10m node scripts/check_explorer_browser.mjs "$RUNNER_TEMP/capability-browser.json"
+      - name: Retain browser and native acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: capability-browser-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/*-native.json
+            ${{ runner.temp }}/capability-browser*
+          retention-days: 90
+
+  validate:
+    name: validate
+    if: always()
+    needs: [core, browser]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    outputs:
+      manifest_sha256: ${{ needs.core.outputs.manifest_sha256 }}
+    steps:
+      - name: Require every acceptance plane
+        env:
+          CORE_RESULT: ${{ needs.core.result }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
+        run: test "$CORE_RESULT" = success && test "$BROWSER_RESULT" = success
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -70,8 +158,12 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9
+        with:
+          version: '0.13.4'
+      - run: uv python install 3.12.11 && uv sync --locked
       - name: Check live identity and site files
         env:
           OKF_COMMIT: ${{ github.sha }}
           OKF_MANIFEST_SHA256: ${{ needs.validate.outputs.manifest_sha256 }}
-        run: python3 scripts/verify_pages.py --commit "$OKF_COMMIT" --manifest-sha256 "$OKF_MANIFEST_SHA256"
+        run: uv run --locked python scripts/verify_pages.py --commit "$OKF_COMMIT" --manifest-sha256 "$OKF_MANIFEST_SHA256"

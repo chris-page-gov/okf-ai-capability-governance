@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0 — 24 November 2026
+
+- Add a locked CPython 3.12.11 uv environment with the existing dependency
+  versions, preserving the evaluated archive and client input bytes.
+- Align the lifecycle declaration with the pinned central publication schema,
+  scoped to the existing public pilot. Preserve the custom semantic profile,
+  upstream source identity and distinct archive and correspondence boundaries.
+- Add a distinct complex-question walkthrough, source copy, graph descriptor and
+  AI context for each bundle. Keep the archive's static coverage and the curated
+  correspondence case's synthetic, draft and human-commit limits visible.
+- Require deterministic core and browser acceptance through a fail-closed
+  `validate` gate before promoting the exact Pages candidate.
+- Bind each companion snapshot to its source nodes and qualified edges, keeping
+  the upstream revision separate from changes to local case annotations.
+- Reject changes outside declared lifecycle boundaries and enforce documentation
+  and changelog updates for controlled changes.
+
 ## 23 November 2026
 
 - Created an independent OKF 0.3 pilot from Em’s public correspondence case.

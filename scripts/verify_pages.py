@@ -42,7 +42,14 @@ def main():
     args = parser.parse_args()
 
     contract = json.loads((ROOT / 'okf.publication.json').read_text())
-    base = contract['publication']['pages']['url']
+    publication = contract['publication']
+    targets = [target for target in publication['targets'] if target['kind'] == 'github-pages']
+    if publication['mode'] != 'automatic-protected-main' or len(targets) != 1:
+        raise ValueError('Exactly one governed Pages target is required')
+    target = targets[0]
+    if not target['exact_commit_required'] or not target['promote_without_rebuild']:
+        raise ValueError('Pages must promote the exact validated candidate')
+    base = target['public_base_url']
     for attempt in range(12):
         try:
             body, content_type = fetch(urljoin(base, 'publication.json'))
