@@ -76,6 +76,8 @@ the historical client evaluation remain separate from current public acceptance.
 The lifecycle check rejects changed paths until their source or generated
 boundary is declared, and requires documentation and changelog updates alongside
 controlled changes.
+Guide checks also require the bundled icon explicitly, so browser defaults cannot
+request a missing icon from the GitHub Pages owner root.
 
 The first product release freezes the exact accepted Pages candidate through the
 [release procedure](docs/releasing.md). GitHub Releases retains the original

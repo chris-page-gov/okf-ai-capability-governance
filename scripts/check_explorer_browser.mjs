@@ -77,6 +77,8 @@ try{
    });
    await context.route(producerPublic+'**',async route=>{const response=await route.fetch({url:local+'/producer/'+route.request().url().slice(producerPublic.length)});await route.fulfill({response});});
    const response=await page.goto(local+'/producer/'+scope+'/walkthrough.html',{waitUntil:'domcontentloaded'});check(response.ok(),'Guide unavailable');
+   const icon=page.locator('head link[rel="icon"]');
+   check(await icon.count()===1&&await icon.getAttribute('href')==='../favicon.png','Guide must declare the bundled icon without a root-domain fallback');
    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Guide horizontal overflow');
    const guideAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();check(!guideAxe.violations.length,'Guide accessibility: '+guideAxe.violations.map(v=>v.id));
    const prefix=output.replace(/\.json$/,'')+'-'+scope+'-'+viewport.name;await page.screenshot({path:prefix+'-guide.png',fullPage:true});

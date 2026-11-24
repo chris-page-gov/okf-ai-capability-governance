@@ -240,6 +240,7 @@ def html_for(scope: str, title: str, question: str, answer: str, limitations: li
 <html lang="en-GB">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)} | AI capability governance</title>
+<link rel="icon" href="../favicon.png">
 <style>
 body{{margin:0;background:#f4f7f9;color:#172b4d;font:18px/1.55 system-ui,sans-serif}}
 main{{box-sizing:border-box;max-width:900px;margin:0 auto;padding:clamp(1rem,4vw,3rem);background:#fff}}

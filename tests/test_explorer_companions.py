@@ -68,7 +68,12 @@ class ExplorerCompanionTests(unittest.TestCase):
                 self.assertFalse(any(assertion.get('type') == 'url_param' and assertion.get('name') == 'view'
                                      for assertion in journey['assertions']))
             guide = files[f'{route_prefix}/walkthrough.html'].decode()
-            primary_link = BeautifulSoup(guide, 'html.parser').select_one('[data-reader-link="primary"]')
+            document = BeautifulSoup(guide, 'html.parser')
+            icon = document.select_one('head link[rel="icon"]')
+            self.assertIsNotNone(icon)
+            self.assertEqual(urljoin(descriptor['bundle_id'], icon['href']),
+                             'https://chris-page-gov.github.io/okf-ai-capability-governance/favicon.png')
+            primary_link = document.select_one('[data-reader-link="primary"]')
             self.assertIsNotNone(primary_link)
             self.assertEqual(primary_link['href'], evidence['reader_url'])
             diagram_link = BeautifulSoup(guide, 'html.parser').select_one('figure a[href="walkthrough.svg"]')
