@@ -7,6 +7,9 @@
 - The curated semantic profile covers the correspondence case. The site archive preserves source structure and bytes.
 - The checked downloads are available from the repository. GitHub Actions rebuilds both archives and checks their contents against the published files.
 - Validation uses Ubuntu 24.04 with the Python 3.12.11 build used for the pilot.
+- The locked uv environment retains the dependency versions used for the frozen evaluation downloads.
+- Each bundle has its own question, visual walkthrough, graph descriptor and AI context. Current acceptance receipts remain separate from the historical four-client evaluation.
+- The required `validate` context aggregates deterministic core and independent browser checks before deployment.
 
 Pages is built from the declared site inventory on protected main. The deployment
 checks the live manifest against the exact source commit and validated file hashes.

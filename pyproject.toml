@@ -1,0 +1,15 @@
+[project]
+name = "okf-ai-capability-governance"
+version = "0.1.0"
+description = "Independent source archive and correspondence governance pilot"
+requires-python = "==3.12.11"
+dependencies = [
+  "beautifulsoup4==4.15.0",
+  "jsonschema==4.26.0",
+  "rdflib==7.6.0",
+  "PyYAML==6.0.3",
+  "markdown-it-py==4.0.0",
+]
+
+[tool.uv]
+package = false

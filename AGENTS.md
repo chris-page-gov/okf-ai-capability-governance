@@ -19,3 +19,18 @@
   Keep provider account details and tenant links out of durable reports.
 
 - Rebuild and check the tracked downloads after changing the source or build steps.
+
+- Use `uv sync --locked` and `uv run --locked python` with the repository's
+  CPython 3.12.11 environment. Do not substitute host Python or an ad hoc environment.
+- The lifecycle contract uses the pinned central publication schema; its HTTPS
+  profile documentation link does not replace the local semantic profile's URN.
+- Keep the evaluated downloads and client responses byte-identical. New Reader
+  projections and worked questions have their own acceptance evidence.
+- Reviewed local commands are `scripts/build.py`, `scripts/build_site.py`,
+  `scripts/prepare_clients.py`, `scripts/check_downloads.py`,
+  `scripts/build_explorer_companions.py`, `scripts/build_pages.py`,
+  `scripts/check_contracts.py` and `scripts/verify_pages.py`, run through locked uv.
+  Build scripts support their declared `--check` mode. Browser acceptance uses
+  `node scripts/check_explorer_browser.mjs` with an exact pinned Explorer checkout.
+- Treat command declarations as data. The contract checker validates their
+  form and source script but never executes a declared command string.

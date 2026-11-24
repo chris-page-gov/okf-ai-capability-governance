@@ -16,6 +16,7 @@ import yaml
 
 from build import ROOT, SITE, digest, encode
 from build_viz import build_viz
+from build_explorer_companions import build as build_companions
 
 OUTPUT = ROOT / '_site'
 GENERATED = ROOT / 'generated'
@@ -107,10 +108,19 @@ def snapshot_files():
 
 def pages_config():
     contract = json.loads((ROOT / 'okf.publication.json').read_text())
-    pages = contract['publication']['pages']
-    if not contract['publication']['authorised'] or pages['url'] not in contract['publication']['targets']:
+    publication = contract['publication']
+    targets = [target for target in publication['targets'] if target['kind'] == 'github-pages']
+    if publication['mode'] != 'automatic-protected-main' or len(targets) != 1:
         raise ValueError('Pages target has not been declared in the publication contract')
-    return pages
+    target = targets[0]
+    if not target['exact_commit_required'] or not target['promote_without_rebuild']:
+        raise ValueError('Pages must promote the exact validated candidate')
+    return {
+        'url': target['public_base_url'], 'branch': 'main',
+        'workflow': target['workflow_path'], 'artifact': '_site/',
+        'discovery': '.well-known/okf.json', 'manifest': 'publication.json',
+        'standalone_reader': 'viz.html',
+    }
 
 
 def build():
@@ -157,6 +167,11 @@ def build():
 
     files['viz.html'] = build_viz(files, base, source, local_target)
 
+    companions = build_companions()
+    if overlap := files.keys() & companions.keys():
+        raise ValueError(f'Explorer companions would replace canonical files: {sorted(overlap)}')
+    files.update(companions)
+
     entrypoints = {
         'archive_index': 'site-bundle/index.md',
         'case_index': 'bundle/index.md',
@@ -170,6 +185,10 @@ def build():
         'standalone_reader': 'viz.html',
         'walkthrough': 'evaluation/BEGINNER-WALKTHROUGH.html',
         'client_evaluation': 'evaluation/CLIENT-EVALUATION.html',
+        'case_explorer': 'bundle/okf-explorer.json',
+        'archive_explorer': 'site-bundle/okf-explorer.json',
+        'case_walkthrough': 'bundle/walkthrough.html',
+        'archive_walkthrough': 'site-bundle/walkthrough.html',
         'file_manifest': 'publication.json',
     }
     if set(entrypoints.values()) - files.keys() - {'publication.json'}:
@@ -192,6 +211,10 @@ def build():
 - [Check the supporting evidence]({links['case_evidence']})
 - [Read machine relationships as JSON-LD]({links['json_ld']})
 - [Read the full site archive index]({links['archive_index']})
+- [Follow the correspondence question]({links['case_walkthrough']})
+- [Follow the source archive question]({links['archive_walkthrough']})
+- [Load the correspondence graph in Explorer]({links['case_explorer']})
+- [Load the source archive in Explorer]({links['archive_explorer']})
 - [Download the reading copy]({links['reading_copy']})
 - [Browse machine discovery metadata]({urljoin(base, '.well-known/okf.json')})
 

@@ -1,54 +1,591 @@
 {
   "schema": "okf-repository-publication-contract.v1",
+  "modified": "2026-11-24",
+  "locale": "en-GB",
+  "time_zone": "Europe/London",
   "repository": {
     "name": "okf-ai-capability-governance",
+    "url": "https://github.com/chris-page-gov/okf-ai-capability-governance",
     "role": "governed-producer",
     "root_index": "generated/site-bundle/index.md",
-    "lifecycle": "public-pilot"
+    "lifecycle": "active"
   },
   "semantic_contract": {
     "path": "okf.semantic.json",
-    "profile": "urn:okf:ai-capability-governance:profile:v1"
+    "profile": "https://github.com/chris-page-gov/okf-ai-capability-governance/blob/main/profiles/README.md"
   },
+  "source_families": [
+    {
+      "id": "public-pilot-source",
+      "label": "Pinned public archive and illustrative correspondence case",
+      "description": "Pinned publisher assets and authored draft case remain distinct source scopes.",
+      "kind": "mixed",
+      "paths": [
+        "source/**",
+        "profiles/**",
+        "scripts/**"
+      ],
+      "formats": [
+        "text/markdown",
+        "application/json",
+        "application/gzip",
+        "text/html",
+        "text/javascript",
+        "text/css"
+      ],
+      "origin": "mixed",
+      "authority": "mixed",
+      "snapshot_policy": "pinned-revision",
+      "inventory": {
+        "method": "pinned-source-register",
+        "manifest_path": "source/README.md",
+        "identity": [
+          "relative-path",
+          "source-identifier",
+          "source-version"
+        ]
+      },
+      "rights": {
+        "status": "approved",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-ai-capability-governance/blob/main/LICENSE_DECISIONS.md"
+        ],
+        "limitations": [
+          "Retain CC-BY-4.0 text attribution, MIT code and OFL font conditions."
+        ]
+      },
+      "sensitivity": {
+        "status": "public-no-personal-data",
+        "assessment": "The case is an illustrative published composite; no local appointment, approval or real correspondence is included.",
+        "evidence": [
+          "https://github.com/chris-page-gov/okf-ai-capability-governance/blob/main/source/pilot.json"
+        ]
+      },
+      "extraction": {
+        "mode": "deterministic-local",
+        "network_access": "prohibited",
+        "command_ids": [
+          "build-case",
+          "build-archive",
+          "build-companions"
+        ],
+        "limitations": [
+          "Builds use pinned local snapshots; no live source verification is implied."
+        ]
+      },
+      "invalidates": [
+        "source",
+        "semantic",
+        "runtime",
+        "documentation",
+        "browser",
+        "deployment"
+      ],
+      "limitations": [
+        "Qualified domain semantics cover the correspondence case; the archive preserves source text and assets."
+      ]
+    }
+  ],
   "boundaries": {
     "authored": [
-      "source/",
-      "profiles/",
-      "scripts/"
+      {
+        "path": "source/**",
+        "role": "content",
+        "source_family_id": "public-pilot-source"
+      },
+      {
+        "path": "profiles/**",
+        "role": "profile",
+        "source_family_id": "public-pilot-source"
+      },
+      {
+        "path": "scripts/**",
+        "role": "generator",
+        "source_family_id": "public-pilot-source"
+      },
+      {
+        "path": "tests/**",
+        "role": "test"
+      },
+      {
+        "path": "README.md",
+        "role": "documentation"
+      },
+      {
+        "path": "REPOSITORY_STATUS.md",
+        "role": "documentation"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "role": "changelog"
+      },
+      {
+        "path": "AGENTS.md",
+        "role": "policy"
+      },
+      {
+        "path": "okf.semantic.json",
+        "role": "policy"
+      },
+      {
+        "path": "okf.publication.json",
+        "role": "publication-contract"
+      },
+      {
+        "path": "pyproject.toml",
+        "role": "policy"
+      },
+      {
+        "path": "uv.lock",
+        "role": "policy"
+      },
+      {
+        "path": ".github/workflows/**",
+        "role": "workflow"
+      },
+      {
+        "path": ".python-version",
+        "role": "policy"
+      },
+      {
+        "path": "requirements.txt",
+        "role": "policy"
+      }
     ],
     "generated": [
-      "generated/",
-      "downloads/",
-      "_site/"
-    ],
-    "excluded": [
-      "generated/"
+      {
+        "path": "generated/**",
+        "role": "other",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "build-case",
+          "build-archive",
+          "prepare-clients",
+          "build-companions"
+        ],
+        "check_command_ids": [
+          "check-case",
+          "check-archive",
+          "check-companions"
+        ]
+      },
+      {
+        "path": "downloads/**",
+        "role": "release-pack",
+        "plane": "runtime",
+        "required": true,
+        "build_command_ids": [
+          "prepare-clients"
+        ],
+        "check_command_ids": [
+          "check-downloads"
+        ]
+      },
+      {
+        "path": "_site/**",
+        "role": "site",
+        "plane": "deployment",
+        "required": true,
+        "build_command_ids": [
+          "build-pages"
+        ],
+        "check_command_ids": [
+          "check-pages"
+        ]
+      }
     ]
   },
-  "publication": {
-    "authorised": true,
-    "targets": [
-      "https://github.com/chris-page-gov/okf-ai-capability-governance",
-      "https://chris-page-gov.github.io/okf-ai-capability-governance/"
+  "planes": [
+    {
+      "id": "source",
+      "depends_on": [],
+      "paths": [
+        "source/**",
+        "profiles/**",
+        "pyproject.toml",
+        "uv.lock",
+        "okf.semantic.json",
+        "okf.publication.json",
+        ".python-version",
+        "requirements.txt"
+      ],
+      "command_ids": [
+        "check-contract",
+        "check-archive"
+      ]
+    },
+    {
+      "id": "semantic",
+      "depends_on": [
+        "source"
+      ],
+      "paths": [
+        "source/pilot.json",
+        "generated/bundle/**",
+        "scripts/build.py"
+      ],
+      "command_ids": [
+        "check-case"
+      ]
+    },
+    {
+      "id": "runtime",
+      "depends_on": [
+        "semantic"
+      ],
+      "paths": [
+        "scripts/build_explorer_companions.py",
+        "generated/explorer-companions/**",
+        "downloads/**"
+      ],
+      "command_ids": [
+        "check-companions",
+        "check-downloads"
+      ]
+    },
+    {
+      "id": "documentation",
+      "depends_on": [
+        "runtime"
+      ],
+      "paths": [
+        "README.md",
+        "REPOSITORY_STATUS.md",
+        "CHANGELOG.md",
+        "source/pages/**"
+      ],
+      "command_ids": [
+        "check-contract",
+        "check-pages"
+      ]
+    },
+    {
+      "id": "browser",
+      "depends_on": [
+        "runtime",
+        "documentation"
+      ],
+      "paths": [
+        "scripts/check_explorer_browser.mjs"
+      ],
+      "command_ids": [
+        "check-explorer-browser"
+      ]
+    },
+    {
+      "id": "deployment",
+      "depends_on": [
+        "browser"
+      ],
+      "paths": [
+        "_site/**",
+        ".github/workflows/**"
+      ],
+      "command_ids": [
+        "check-pages",
+        "verify-pages"
+      ]
+    }
+  ],
+  "tooling": {
+    "commands": [
+      {
+        "id": "build-case",
+        "kind": "build",
+        "planes": [
+          "source",
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-case",
+        "kind": "check",
+        "planes": [
+          "semantic"
+        ],
+        "command": "uv run --locked python scripts/build.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "build-archive",
+        "kind": "build",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/build_site.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-archive",
+        "kind": "check",
+        "planes": [
+          "source"
+        ],
+        "command": "uv run --locked python scripts/build_site.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "prepare-clients",
+        "kind": "build",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/prepare_clients.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-downloads",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/check_downloads.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "build-companions",
+        "kind": "build",
+        "planes": [
+          "runtime",
+          "documentation"
+        ],
+        "command": "uv run --locked python scripts/build_explorer_companions.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-companions",
+        "kind": "check",
+        "planes": [
+          "runtime"
+        ],
+        "command": "uv run --locked python scripts/build_explorer_companions.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-contract",
+        "kind": "check",
+        "planes": [
+          "source",
+          "documentation"
+        ],
+        "command": "uv run --locked python scripts/check_contracts.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "build-pages",
+        "kind": "build",
+        "planes": [
+          "documentation",
+          "deployment"
+        ],
+        "command": "uv run --locked python scripts/build_pages.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "generated-only",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-pages",
+        "kind": "check",
+        "planes": [
+          "documentation",
+          "deployment"
+        ],
+        "command": "uv run --locked python scripts/build_pages.py --check",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "verify-pages",
+        "kind": "verify",
+        "planes": [
+          "deployment"
+        ],
+        "command": "uv run --locked python scripts/verify_pages.py",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "bounded-read",
+        "mutates": "none",
+        "timeout_minutes": 5
+      },
+      {
+        "id": "check-explorer-browser",
+        "kind": "test",
+        "planes": [
+          "browser"
+        ],
+        "command": "node scripts/check_explorer_browser.mjs",
+        "source": "AGENTS.md",
+        "review_status": "reviewed-local-guidance",
+        "network": "none",
+        "mutates": "none",
+        "timeout_minutes": 10
+      }
+    ]
+  },
+  "lockstep": {
+    "controlled_paths": [
+      "source/**",
+      "profiles/**",
+      "scripts/**",
+      "tests/**",
+      "generated/**",
+      "downloads/**",
+      ".github/workflows/**",
+      "okf.semantic.json",
+      "okf.publication.json",
+      "pyproject.toml",
+      "uv.lock",
+      ".python-version",
+      "requirements.txt"
     ],
-    "release_status": "public-pilot",
-    "pages": {
-      "url": "https://chris-page-gov.github.io/okf-ai-capability-governance/",
-      "branch": "main",
-      "workflow": ".github/workflows/validate.yml",
-      "artifact": "_site/",
-      "discovery": ".well-known/okf.json",
-      "manifest": "publication.json",
-      "standalone_reader": "viz.html"
+    "documentation_paths": [
+      "README.md",
+      "REPOSITORY_STATUS.md",
+      "CHANGELOG.md"
+    ],
+    "changelog_path": "CHANGELOG.md",
+    "check_command_id": "check-contract",
+    "dependency_update_policy": "assess-release-bound-bytes-no-blanket-exemption",
+    "unknown_path_policy": "fail-closed"
+  },
+  "ci": {
+    "provider": "github-actions",
+    "workflow_paths": [
+      ".github/workflows/validate.yml"
+    ],
+    "impact_routing": "full-suite",
+    "parallelism": "independent-planes",
+    "unknown_path_policy": "fail-closed",
+    "browser": {
+      "ordinary": {
+        "policy": "installed-chrome",
+        "engines": [
+          "chrome"
+        ],
+        "command_ids": [
+          "check-explorer-browser"
+        ]
+      },
+      "cross_engine": {
+        "policy": "not-applicable",
+        "engines": [],
+        "command_ids": [],
+        "installation": {
+          "policy": "none",
+          "command_ids": []
+        }
+      }
     }
   },
-  "validation": {
-    "graph": "scripts/build.py --check",
-    "core": "installed guarded okf-plus-generate validator",
-    "consumer": "installed guarded okf-plus-consume scanner and offline browser",
-    "source_archive": "scripts/build_site.py --check",
-    "downloads": "scripts/check_downloads.py",
-    "pages": "scripts/build_pages.py --check",
-    "deployed_pages": "scripts/verify_pages.py"
-  }
+  "publication": {
+    "mode": "automatic-protected-main",
+    "scope": "bounded-demonstrator",
+    "authority": {
+      "decision": "The existing public research pilot publishes from protected main after validation. The source archive and illustrative case retain their separate limits.",
+      "evidence_paths": [
+        "AGENTS.md",
+        "REPOSITORY_STATUS.md",
+        ".github/workflows/validate.yml"
+      ]
+    },
+    "candidate_policy": "promote-exact-assured-bytes-without-rebuild",
+    "targets": [
+      {
+        "id": "github-pages",
+        "kind": "github-pages",
+        "workflow_path": ".github/workflows/validate.yml",
+        "public_base_url": "https://chris-page-gov.github.io/okf-ai-capability-governance/",
+        "exact_commit_required": true,
+        "promote_without_rebuild": true
+      }
+    ]
+  },
+  "verification": {
+    "required": true,
+    "browser": "real-browser",
+    "exact_commit_required": true,
+    "identity_checks": [
+      "commit",
+      "descriptor",
+      "sha256",
+      "route"
+    ],
+    "journeys": [
+      {
+        "id": "archive-coverage",
+        "url": "https://chris-page-gov.github.io/okf-ai-capability-governance/site-bundle/walkthrough.html",
+        "expected_identity": "Pinned source archive coverage",
+        "steps": [
+          "Read the scope-specific question and limits.",
+          "Follow the actual Reader link and inspect the selected source.",
+          "Reload and retain the same record and source qualifications."
+        ]
+      },
+      {
+        "id": "correspondence-send",
+        "url": "https://chris-page-gov.github.io/okf-ai-capability-governance/bundle/walkthrough.html",
+        "expected_identity": "Correspondence mandate and proposed send action",
+        "steps": [
+          "Read the scope-specific question and limits.",
+          "Follow the actual Reader link and inspect the selected source.",
+          "Reload and retain the same record and source qualifications."
+        ]
+      }
+    ],
+    "console_policy": "no-errors",
+    "command_ids": [
+      "verify-pages",
+      "check-explorer-browser"
+    ]
+  },
+  "limitations": [
+    "The local semantic profile identifier remains urn:okf:ai-capability-governance:profile:v1; its HTTPS documentation link is a lifecycle reference, not a replacement semantic identity.",
+    "The archive captures the pinned static deployment, not a live interactive service.",
+    "The correspondence case is illustrative and establishes no local mandate, appointment or approval.",
+    "Historical client evaluation archives and responses remain frozen evidence; new companion projections have separate acceptance."
+  ]
 }
