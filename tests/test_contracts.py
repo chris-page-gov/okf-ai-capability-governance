@@ -1,5 +1,6 @@
 """Protect the publication boundary, frozen artefacts and independent gates."""
 import importlib.util
+from hashlib import sha256
 import json
 from pathlib import Path
 import tempfile
@@ -12,6 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('contracts', ROOT / 'scripts/check_contracts.py')
 contracts = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(contracts)
+verifier_spec = importlib.util.spec_from_file_location('verify_pages', ROOT / 'scripts/verify_pages.py')
+verifier = importlib.util.module_from_spec(verifier_spec)
+verifier_spec.loader.exec_module(verifier)
 
 
 class PublicationBoundaryTests(unittest.TestCase):
@@ -75,6 +79,36 @@ class PublicationBoundaryTests(unittest.TestCase):
         self.assertEqual(checkout['ref'], consumer['commit'])
         self.assertEqual(checkout['repository'], 'chris-page-gov/okf-explorer')
         self.assertFalse(checkout['persist-credentials'])
+        steps_by_name = [step.get('name') for step in steps]
+        self.assertLess(
+            steps_by_name.index('Preflight the exact packaged candidate'),
+            steps_by_name.index('Check out the reviewed Reader'),
+        )
+
+    def test_local_pages_preflight_rejects_wrong_identity_and_changed_file(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            candidate = Path(temporary)
+            landing = candidate / 'index.html'
+            landing.write_bytes(b'<h1>Evidence</h1>')
+            commit = '1' * 40
+            base = 'https://example.org/'
+            raw = json.dumps({
+                'schema': 'okf-companion-pages-manifest.v1',
+                'source_commit': commit,
+                'site': base,
+                'okf_version': '0.3',
+                'files': {'index.html': sha256(landing.read_bytes()).hexdigest()},
+            }).encode()
+            (candidate / 'publication.json').write_bytes(raw)
+            digest = sha256(raw).hexdigest()
+            self.assertEqual(verifier.verify_candidate(candidate, commit, digest, base), 1)
+            with self.assertRaisesRegex(ValueError, 'different manifest'):
+                verifier.verify_candidate(candidate, commit, '0' * 64, base)
+            with self.assertRaisesRegex(ValueError, 'identity differs'):
+                verifier.verify_candidate(candidate, '2' * 40, digest, base)
+            landing.write_bytes(b'<h1>Modified</h1>')
+            with self.assertRaisesRegex(ValueError, 'Local file differs'):
+                verifier.verify_candidate(candidate, commit, digest, base)
 
 
 if __name__ == '__main__':

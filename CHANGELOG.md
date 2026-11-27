@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Verify the exact staged Pages manifest and every file before installing the
+  Reader or browser for acceptance.
+
 ## 0.1.0 — 24 November 2026
 
 - Add a locked CPython 3.12.11 uv environment with the existing dependency
