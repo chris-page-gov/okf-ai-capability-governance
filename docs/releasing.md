@@ -12,7 +12,8 @@ main; the owner-authorised release step freezes the accepted candidate manually.
 
 1. Require successful core, browser, aggregate validation, deployment and live-file
    verification jobs for the exact main revision. Record its Git commit and the
-   workflow run and artifact identifiers.
+   workflow run and artefact identifiers. The browser job checks the original
+   manifest, Core version, source revision and file digests before installing the Reader.
 2. Download the unchanged `capability-pages-COMMIT` Actions artifact. Check its
    complete file inventory against `publication.json`, including the source
    commit. Retain the original ZIP and its SHA-256 digest.
